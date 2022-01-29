@@ -1,0 +1,69 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+$primary: rgb(225, 0, 255);
+
+@keyframes cycle {
+  0% {
+    transform: rotate(0.2turn);
+  }
+
+  25% {
+    transform: rotate(0.4turn);
+  }
+
+  50% {
+    transform: rotate(0.6turn);
+  }
+
+  75% {
+    transform: rotate(0.8turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+p>a:hover {
+  color: #d9d9d9;
+  text-decoration: underline;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-social-icons {
+  width: 100%;
+  display: block;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.4rem;
+}
+
+.social-icons a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.fa {
+  padding: 6vh 6vw;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: rgb(41, 38, 38);
+  font-size: 3vw;
+}
+
+.fa:hover {
+  animation: cycle 0.2s;
+}
