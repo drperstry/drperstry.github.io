@@ -3,7 +3,41 @@
 
 $primary: rgb(225, 0, 255);
 
+@keyframes Letter {
+  0% {
+    background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
+  25% {
+    background: -webkit-linear-gradient(left, rgb(41, 38, 38) 70%, rgb(212, 15, 196));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  50% {
+    background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+  75% {
+    background: -webkit-linear-gradient(left, rgb(41, 38, 38) 70%, rgb(212, 15, 196));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+
+  100% {
+    background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+}
 
 @keyframes blinkingBackground {
   0% {

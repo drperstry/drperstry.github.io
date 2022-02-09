@@ -1,0 +1,27 @@
+@use '../contact-me.component'as *;
+@use '../../../../styles'as *;
+
+li {
+  display: inline-block;
+  margin: 0.4rem;
+
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.fa {
+  padding: 6vh 6vw;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: rgb(41, 38, 38);
+  font-size: 3vw;
+}
+
+.fa:hover {
+  animation: cycle 0.2s;
+}

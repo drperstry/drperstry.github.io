@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MyPlayGroundComponent } from './Component/my-play-ground/my-play-ground.component';
 import {NavbarComponent} from './Component/navbar/navbar.component';
-import { FooterComponent } from './Component/footer/footer.component'
+import { FooterComponent } from './Component/footer/footer.component';
+import { SocialcardsComponent } from './Component/contact-me/socialcards/socialcards.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { FooterComponent } from './Component/footer/footer.component'
     ProjectsComponent,
     MyPlayGroundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SocialcardsComponent
   ],
   imports: [
     BrowserModule,
