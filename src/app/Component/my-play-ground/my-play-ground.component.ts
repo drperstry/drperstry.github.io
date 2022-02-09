@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
+import { HttpService } from '../../Services/http/http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-play-ground',
@@ -12,7 +13,7 @@ export class MyPlayGroundComponent implements OnInit {
   coins:any=[];
   excuses:any=[];
   name: string = '';  // add this
-  constructor(private _http:HttpService) { }
+  constructor(private router:Router,private _http:HttpService) { }
 
   ngOnInit() {
     this._http.getcoins().subscribe(data => {

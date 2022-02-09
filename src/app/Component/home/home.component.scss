@@ -6,10 +6,6 @@
     100%    { color: #bb48c5;}
 }
 
-.card svg.material-icons path {
-    fill: #888;
-  }
-
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -32,18 +28,21 @@
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 24px;
+    height: 16px;
+    width: 168px;
+
+    svg.material-icons{
+      path{
+        fill: #888;
+      }
+    }
   }
 
-  .card-container .card:not(:last-child) {
+  .card:not(:last-child) {
     margin-right: 0;
   }
 
-  .card.card-small {
-    height: 16px;
-    width: 168px;
-  }
-
-  .card-container .card:not(.highlight-card) {
+  .card:not(.highlight-card) {
     cursor: pointer;
   }
 
@@ -70,7 +69,7 @@
     margin-left: 60px;
   }
   
-a,
+  a,
   a:visited,
   a:hover {
     color: #1976d2;
@@ -87,31 +86,30 @@ a,
     padding-top: 45px;
     margin-top: 8px;
     background-color: rgb(15, 15, 16);
-  }
+    ::before{
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      font-size: 2rem;
+      line-height: 0;
+      padding: 14px 0;
+      text-indent: 4px;
+      animation: blinkingColor 5s infinite;
+    }
+    pre{
+      font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+      color: white;
+      padding: 0 1rem 1rem;
+      margin: 0;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      background-color: transparent;
+    }
 
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-    animation: blinkingColor 5s infinite;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    background-color: transparent;
   }
