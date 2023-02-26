@@ -2,27 +2,7 @@
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
-@keyframes cycle {
-  0% {
-    transform: rotate(0.2turn);
-  }
 
-  25% {
-    transform: rotate(0.4turn);
-  }
-
-  50% {
-    transform: rotate(0.6turn);
-  }
-
-  75% {
-    transform: rotate(0.8turn);
-  }
-
-  100% {
-    transform: rotate(1turn);
-  }
-}
 
 ul {
   padding: 0;
@@ -32,4 +12,8 @@ ul {
 .footer-social-icons {
   width: 100%;
   display: block;
+}
+.social-icons{
+  display: flex;
+  justify-content: center;
 }

@@ -1,10 +1,10 @@
 @use '../../../styles' as *;
-.nav-tab.disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-    text-decoration: none;
-  }
-  
+// .nav-tab.disabled {
+//     cursor: not-allowed;
+//     opacity: 0.5;
+//     text-decoration: none;
+//   }
+
   .nav{
     margin-bottom: 30px;
     display: flex;
@@ -13,7 +13,7 @@
     align-items: center;
     height: 40vh;
     position: relative;
-    animation: blinkingBackground 6s infinite;
+    background-image: linear-gradient(to left, $primary, #181818);
     text-align: center;
     padding: 0 1em;
   }
@@ -91,7 +91,7 @@
   
   .nav-tab:hover {
     color: #1e1f26;
-    animation: Letter 1s infinite;
+    background-color: $primary;
   }
   
   .Letters{

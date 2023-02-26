@@ -16,4 +16,26 @@ export class HttpService {
     var url="https://excuser.herokuapp.com/v1/excuse/"+k;
     return this.http.get(url)
   }
+  async posturl(url:string){
+    return fetch('http://127.0.0.1:5000/ShortUrls',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({
+        fullUrl:url
+      })
+    }).
+    then(response => 
+      response.json().then(data => ({
+          data: data,
+          status: response.status
+      })
+  ).then(res => {
+      return res.data
+  }))
+    .catch(err=>{
+      return err.json()
+    })
+  }
 }

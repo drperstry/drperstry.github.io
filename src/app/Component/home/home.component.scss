@@ -37,7 +37,9 @@
       }
     }
   }
-
+  svg{
+    display: inline;
+  }
   .card:not(:last-child) {
     margin-right: 0;
   }
@@ -106,10 +108,11 @@
       color: white;
       padding: 0 1rem 1rem;
       margin: 0;
-      overflow-x: auto;
+      overflow-x: none;
       white-space: pre-wrap;
       word-wrap: break-word;
       background-color: transparent;
+      font-size: 16px;
     }
 
   }

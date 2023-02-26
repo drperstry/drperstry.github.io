@@ -7,7 +7,6 @@ import { ContactMeComponent } from './Component/contact-me/contact-me.component'
 import { ProjectsComponent } from './Component/projects/projects.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MyPlayGroundComponent } from './Component/my-play-ground/my-play-ground.component';
 import {NavbarComponent} from './Component/navbar/navbar.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { SocialcardsComponent } from './Component/contact-me/socialcards/socialcards.component'
@@ -17,7 +16,6 @@ import { SocialcardsComponent } from './Component/contact-me/socialcards/socialc
     HomeComponent,
     ContactMeComponent,
     ProjectsComponent,
-    MyPlayGroundComponent,
     NavbarComponent,
     FooterComponent,
     SocialcardsComponent

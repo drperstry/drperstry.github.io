@@ -1,0 +1,22 @@
+@use '../../../styles' as *;
+.main{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap ;
+   background-image: linear-gradient(to right, $primary, #181818);
+   .sub{
+      display: flex;
+      justify-content: center;
+      margin-top:10px;
+      margin-bottom: 10px;
+      width: 100%;
+      iframe{
+         border-radius: 3%;
+
+      }
+   }
+}
+h1{
+   color:$primary
+}

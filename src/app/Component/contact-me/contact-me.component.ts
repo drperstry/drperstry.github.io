@@ -12,12 +12,12 @@ export class ContactMeComponent implements OnInit {
 
   social_icons = [
     {
-      class: 'fa-twitter',
-      link: 'https://twitter.com'
-    },
-    {
       class: 'fa-whatsapp',
       link: 'https://wa.me/966503810471'
+    },
+    {
+      class: 'fa-at',
+      link: 'mailto:abdulrahmanhuwais@gmail.com'
     },
     {
       class: 'fa-linkedin',
@@ -26,10 +26,6 @@ export class ContactMeComponent implements OnInit {
     {
       class: 'fa-github',
       link: 'https://github.com/drperstry'
-    },
-    {
-      class: 'fa-codepen',
-      link: 'https://codepen.io/drperstry'
     }
   ];
 

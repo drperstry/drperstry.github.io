@@ -1,8 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+$primary: #e100ff;
+@keyframes cycle {
+  0% {
+    transform: rotate(0.2turn);
+  }
 
-$primary: rgb(225, 0, 255);
+  25% {
+    transform: rotate(0.4turn);
+  }
 
+  50% {
+    transform: rotate(0.6turn);
+  }
+
+  75% {
+    transform: rotate(0.8turn);
+  }
+
+  100% {
+    transform: rotate(1turn);
+  }
+}
 @keyframes Letter {
   0% {
     background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
@@ -39,27 +61,7 @@ $primary: rgb(225, 0, 255);
   }
 }
 
-@keyframes blinkingBackground {
-  0% {
-    background-image: linear-gradient(to right, #bb48c5, #181818);
-  }
 
-  25% {
-    background-image: linear-gradient(to left, #bb48c5, #181818);
-  }
-
-  50% {
-    background-image: linear-gradient(to right, #bb48c5, #181818);
-  }
-
-  75% {
-    background-image: linear-gradient(to left, #bb48c5, #181818);
-  }
-
-  100% {
-    background-image: linear-gradient(to right, #bb48c5, #181818);
-  }
-}
 
 @keyframes Trasnformation {
   0% {
