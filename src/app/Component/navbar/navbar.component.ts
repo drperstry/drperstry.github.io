@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
     this.closeMobileMenu();
 
     // If not on home page, navigate to home first then scroll
-    if (this.router.url !== '/' && this.router.url !== '/#/') {
+    if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {
           this.performScroll(sectionId);
