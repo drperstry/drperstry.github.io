@@ -1,15 +1,63 @@
-
-<footer class="page-footer font-small blue pt-4 justify-content-center">
-    <span>
-      Liked My Work?&nbsp;&nbsp;
-    </span>
-    <a href="https://github.com/drperstry" target="_blank" rel="noopener">
-      <div class="github-star-badge">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-        </svg>
-        Star
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a routerLink="/" class="footer-logo">
+          <span class="logo-text">A</span>
+          <span class="logo-accent">.</span>
+        </a>
+        <p class="footer-tagline">Building robust systems & driving technical excellence</p>
       </div>
-    </a>
-  </footer>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a routerLink="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a routerLink="/contact">Contact</a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <a href="mailto:abdulrahmanhuwais@gmail.com">
+          <i class="fas fa-envelope"></i>
+          abdulrahmanhuwais&#64;gmail.com
+        </a>
+        <a href="tel:+966503810471">
+          <i class="fas fa-phone"></i>
+          +966 503 810 471
+        </a>
+        <span class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          Riyadh, Saudi Arabia
+        </span>
+      </div>
+
+      <!-- Social Links -->
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a *ngFor="let social of socialLinks"
+             [href]="social.url"
+             target="_blank"
+             rel="noopener"
+             [attr.aria-label]="social.label"
+             class="social-icon">
+            <i [class]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ currentYear }} Abdulrahman Alhuwais. All rights reserved.</p>
+      <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="download-cv">
+        <i class="fas fa-download"></i>
+        Download CV
+      </a>
+    </div>
+  </div>
+</footer>

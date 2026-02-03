@@ -1,29 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Component/home/home.component';
 import { ContactMeComponent } from './Component/contact-me/contact-me.component';
-import { ProjectsComponent } from './Component/projects/projects.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {NavbarComponent} from './Component/navbar/navbar.component';
+import { NavbarComponent } from './Component/navbar/navbar.component';
 import { FooterComponent } from './Component/footer/footer.component';
-import { SocialcardsComponent } from './Component/contact-me/socialcards/socialcards.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactMeComponent,
-    ProjectsComponent,
     NavbarComponent,
-    FooterComponent,
-    SocialcardsComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
