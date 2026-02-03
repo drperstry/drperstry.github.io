@@ -1,220 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-$primary: #e100ff;
-@keyframes cycle {
-  0% {
-    transform: rotate(0.2turn);
-  }
 
-  25% {
-    transform: rotate(0.4turn);
-  }
-
-  50% {
-    transform: rotate(0.6turn);
-  }
-
-  75% {
-    transform: rotate(0.8turn);
-  }
-
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@keyframes Letter {
-  0% {
-    background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  25% {
-    background: -webkit-linear-gradient(left, rgb(41, 38, 38) 70%, rgb(212, 15, 196));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  50% {
-    background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-  }
-
-  75% {
-    background: -webkit-linear-gradient(left, rgb(41, 38, 38) 70%, rgb(212, 15, 196));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-  }
-
-  100% {
-    background: -webkit-linear-gradient(left, rgb(212, 15, 196) 70%, rgb(41, 38, 38));
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-  }
+// Custom CSS Variables
+:root {
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+  --dark: #0f172a;
+  --dark-100: #1e293b;
+  --dark-200: #334155;
+  --dark-300: #475569;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
 }
 
-
-
-@keyframes Trasnformation {
-  0% {
-  }
-
-  25% {
-    transform: skewY(-20deg);
-
-  }
-
-  50% {
-    transform: skewX(20deg);
-
-  }
-
-  75% {
-    transform: skewY(20deg);
-  }
-
-  100% {
-    transform: skewX(-20deg);
-  }
+// Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 20;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: 'Nunito', 'sans-serif';
-  font-size: 18px;
-  background-color: #24292e;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--dark);
+  color: #f8fafc;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.slider {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
-  position: relative;
-  animation: blinkingBackground 6s infinite;
-  text-align: center;
-  padding: 0 1em;
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.slider h1 {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 3vw;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  letter-spacing: 0.3rem;
-  color: $primary;
-  transition: all 0.3s ease;
-  z-index: 3;
-}
-
-.slider h2 {
-  font-size: 2vw;
-  letter-spacing: 0.3rem;
-  font-family: "ROBOTO", sans-serif;
-  font-weight: 300;
-  color: #faebd7;
-  z-index: 4;
-}
-
+// Links
 a {
   text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
 }
 
-
-.background {
-  position: absolute;
-  height: 50;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
+// Scrollbar Styling
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.loader span {
-  color: rgb(41, 38, 38);
+::-webkit-scrollbar-track {
+  background: var(--dark-100);
 }
 
-.Letters{
-  font-family: "ROBOTO", sans-serif;
-  transition: transform .4s ease-in-out;
-  color:$primary;
-  font-size:4vw;
-  display:inline-block;
-  justify-self: center;
-  width: 20%;
-  margin-bottom: 10px;
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
 }
 
-.Letters:hover{
-  animation: Trasnformation 0.2s infinite;
-  color:black;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
 }
 
-.line-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  overflow: hidden;
-  z-index: -1;
-  svg {
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-    }  
-    path {
-      stroke-dasharray: 2;
-      stroke-dashoffset: 1;
-      animation: dash 5s linear infinite;
-    }
+// Selection
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+// Animations
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.8); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  @media (min-width: 400px) {
-  
-    .slider h1 {
-      font-size: 3vw;
-    }
-  
-    .slider h2 {
-      font-size: 3vw;
-    }
-  
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+// Utility Classes
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradient 8s ease infinite;
+}
+
+// Glass Effect
+.glass {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+// Gradient Text
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, var(--secondary) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 8s ease infinite;
+}
+
+// Glow Effect
+.glow {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+
+  &:hover {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
   }
-  
-  @media screen {
-  
-    .slider h1 {
-      font-size: 4vw;
-    }
-  
-    .slider h2 {
-      font-size: 2vw;
-      letter-spacing: 0.2vw;
-    }
-  
-    pre{
-      font-size:1.2vw;
-    }
-  }
+}

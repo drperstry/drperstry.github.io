@@ -1,15 +1,44 @@
-<section class="nav">
-    <h1>PORTFOLIO</h1>
-    <h3 class="span loader">
-      <span class='m'>D</span>
-      <span class='m'>A</span>
-      <span class='m'>H</span>
-      <span class='m'>I</span>
-      <span class='m'>M</span>
-    </h3>
-    <div class="nav-container">
-      <a class="nav-tab" href="#" routerLink="/">Home</a>
-      <a class="nav-tab" href="#" routerLink="/contact-me">Contact Me</a>
-      <a class="nav-tab" href="#" routerLink="/projects">My Work</a>
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a routerLink="/" class="logo" (click)="closeMobileMenu()">
+      <span class="logo-text">A</span>
+      <span class="logo-accent">.</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="nav-links desktop-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </div>
-  </section>
+
+    <!-- CTA Button -->
+    <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn-download desktop-nav">
+      <i class="fas fa-download"></i>
+      Resume
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" [class.open]="isMobileMenuOpen">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()">Home</a>
+    <a href="#about" (click)="closeMobileMenu()">About</a>
+    <a href="#experience" (click)="closeMobileMenu()">Experience</a>
+    <a href="#skills" (click)="closeMobileMenu()">Skills</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
+    <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn-download-mobile" (click)="closeMobileMenu()">
+      <i class="fas fa-download"></i>
+      Download Resume
+    </a>
+  </div>
+</nav>

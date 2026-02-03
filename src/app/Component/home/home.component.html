@@ -1,78 +1,217 @@
-<input type="hidden" #selection>
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
-<div class="card-container">
-  <button class="card card-small" (click)="selection.value = 'component'" tabindex="0">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-      <path fill-rule="evenodd"
-        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-    </svg>
-    <span> About Me</span>
-  </button>
-  <button class="card card-small" (click)="selection.value = 'SoftwareEng.'" tabindex="0">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z"/>
-    </svg>
-    <span>Software Engineer Intern</span>
-  </button>
-  <button class="card card-small" (click)="selection.value = 'WebDev'" tabindex="0">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path
-        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-    </svg>
-    <span>Web Developer</span>
-  </button>
-  <button class="card card-small" (click)="selection.value = 'SupportEng.'" tabindex="0">
-    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z"/>
-    </svg>
-    <span>Support Engineer</span>
-  </button>
-</div>
+  <div class="hero-content" data-aos="fade-up">
+    <span class="hero-greeting">Hello, I'm</span>
+    <h1 class="hero-name">Abdulrahman <span class="gradient-text">Alhuwais</span></h1>
+    <div class="hero-role">
+      <span class="role-text">{{ displayedRole }}</span>
+      <span class="cursor" [class.typing]="isTyping">|</span>
+    </div>
+    <p class="hero-description">
+      Software Engineer with strong experience in banking and enterprise systems,
+      focused on quality improvement, reliability, and business impact.
+    </p>
+    <div class="hero-cta">
+      <a routerLink="/contact" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i>
+        Get In Touch
+      </a>
+      <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn btn-outline">
+        <i class="fas fa-download"></i>
+        Download CV
+      </a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/drperstry" target="_blank" rel="noopener" class="social-link">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/abdulrahman-alhuwais/" target="_blank" rel="noopener" class="social-link">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:abdulrahmanhuwais@gmail.com" class="social-link">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
 
-<div class="terminal" [ngSwitch]="selection.value">
-  <pre *ngSwitchDefault><code> Hello, My name is Abdlurahman <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-</svg>
- * I completed my bachelor's in Software Engineering.
- * During my Study I worked in over 10 Software Project in which I and my teams went through the whole Software Life cycle.
- * Proccess that I am familiar with as I practiced are Waterfall and Agile.
+  <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+    <span>Scroll Down</span>
+    <div class="scroll-arrow">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
 
- I am looking for a chance where I can apply and improve my skills in an impactful way which can help business grow. 
- Open for any type of opportunities and challenges in the scope of my field.
-</code>
-</pre>
+<!-- About Section -->
+<section class="about section" id="about">
+  <div class="container-custom">
+    <h2 class="section-title" data-aos="fade-up">About Me</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Passionate about building robust systems and driving technical excellence
+    </p>
 
-<pre *ngSwitchCase="'SoftwareEng.'"><samp> Time Period: May 2021 - Aug 2021
-  Software Engineer Intern in Saudi Aramco.
-  During my internship, I worked in two main applications. 
-  * One is a desktop app for tracking lab samples results. 
-  * The second one is a website for tracking employee's courses. 
-  
-  Technology used during the period: 
-  .NET, access DB, Microsoft SQL server.
-  </samp></pre>
+    <div class="about-content">
+      <div class="about-text" data-aos="fade-right">
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="about-info">
+            <h3>Education</h3>
+            <p class="degree">Bachelor's Degree - Software Engineering</p>
+            <p class="school">King Fahd University of Petroleum and Minerals</p>
+            <p class="honors">Graduated with Honor Class</p>
+            <p class="concentration">Cyber Security and Blockchain concentration</p>
+          </div>
+        </div>
 
-<pre *ngSwitchCase="'WebDev'"><samp> Time Period: Jan 2022 - May 2022
-Developed KFUPM CLUBS system as graduation project.
-  A centralized platform where students can join and manage clubs, events, post, comments and more. Built with Angular and Firebase. 
-  As a project leader, I was involved in the documentation, design, implementation, testing.
-  My contribution in the implementation was working as the Back-end developer where I mainly did the following:
-  1- Enforced security rules for CRUD operations of different roles.
-  2- Designed the database schema in the Firebase system. 
-  Technologies used during the period: Teams, Figma, Angular, tailwind, Firebase.
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="about-info">
+            <h3>Professional Focus</h3>
+            <p>Proven track record in CRM platforms, backend services, DevOps automation, and operational tooling.
+               I specialize in building enterprise-grade solutions that improve business processes and system reliability.</p>
+          </div>
+        </div>
+      </div>
 
-</samp></pre>
+      <div class="about-stats" data-aos="fade-left">
+        <div class="stat-card">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Companies</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<pre *ngSwitchCase="'SupportEng.'"><samp> Time Period: Oct 2022 - Now
-Support engineer for the application CRM dynamic 365 in Alrajhi Bank. 
-  My work was divided into four main activities. 
-  1- Resolving users' issues which various from the following: 
-  lacking access, code bug, business rule or user guide. 
-  2- Deployment of new packages into production. 
-  3- Monitoring performance of servers and services of the application. 
-  4- Extracting data from the CRM database and doing analytics reports for the business users.
-  Technologies used during the period: 
-  CRM dynamic 365, JavaScript, C#, Microsoft SQL server, SSIS/SSRS, Excel, Windows servers 2012, TrueSight.
-  </samp></pre>
-</div>
+<!-- Experience Section -->
+<section class="experience section" id="experience">
+  <div class="container-custom">
+    <h2 class="section-title" data-aos="fade-up">Experience</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+      My professional journey in software engineering
+    </p>
+
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let exp of experiences; let i = index"
+           [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+           [attr.data-aos-delay]="i * 100">
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-title-group">
+              <h3 class="timeline-title">{{ exp.title }}</h3>
+              <span class="timeline-company">{{ exp.company }}</span>
+            </div>
+            <div class="timeline-meta">
+              <span class="timeline-period">
+                <i class="far fa-calendar-alt"></i>
+                {{ exp.period }}
+              </span>
+              <span class="timeline-location">
+                <i class="fas fa-map-marker-alt"></i>
+                {{ exp.location }}
+              </span>
+            </div>
+          </div>
+          <ul class="timeline-description">
+            <li *ngFor="let desc of exp.description">{{ desc }}</li>
+          </ul>
+          <div class="timeline-technologies">
+            <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills section" id="skills">
+  <div class="container-custom">
+    <h2 class="section-title" data-aos="fade-up">Skills</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Technologies and expertise I bring to the table
+    </p>
+
+    <div class="skills-grid">
+      <!-- Technical Skills -->
+      <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="category-title">
+          <i class="fas fa-code"></i>
+          Technical Skills
+        </h3>
+        <div class="skills-list">
+          <div class="skill-item" *ngFor="let skill of hardSkills; let i = index"
+               [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="200 + (i * 50)">
+            <div class="skill-header">
+              <div class="skill-info">
+                <i [class]="skill.icon"></i>
+                <span>{{ skill.name }}</span>
+              </div>
+              <span class="skill-percentage">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-fill" [style.width.%]="skill.level"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="skills-category soft-skills" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="category-title">
+          <i class="fas fa-users"></i>
+          Soft Skills
+        </h3>
+        <div class="soft-skills-grid">
+          <div class="soft-skill-card" *ngFor="let skill of softSkills; let i = index"
+               [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="300 + (i * 50)">
+            <i class="fas fa-check-circle"></i>
+            <span>{{ skill }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" data-aos="fade-up">
+  <div class="container-custom">
+    <div class="cta-content">
+      <h2>Interested in working together?</h2>
+      <p>I'm always open to discussing new opportunities and challenges.</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="btn btn-primary">
+          <i class="fas fa-envelope"></i>
+          Contact Me
+        </a>
+        <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn btn-outline">
+          <i class="fas fa-file-pdf"></i>
+          View Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
