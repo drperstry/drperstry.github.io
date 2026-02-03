@@ -26,4 +26,31 @@ export class NavbarComponent implements OnInit {
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
   }
+
+  scrollToSection(sectionId: string): void {
+    this.closeMobileMenu();
+
+    // If not on home page, navigate to home first then scroll
+    if (this.router.url !== '/' && this.router.url !== '/#/') {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          this.performScroll(sectionId);
+        }, 100);
+      });
+    } else {
+      this.performScroll(sectionId);
+    }
+  }
+
+  private performScroll(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - navbarHeight,
+        behavior: 'smooth'
+      });
+    }
+  }
 }

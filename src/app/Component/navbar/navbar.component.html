@@ -9,9 +9,10 @@
     <!-- Desktop Navigation -->
     <div class="nav-links desktop-nav">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
+      <a (click)="scrollToSection('about')" style="cursor: pointer;">About</a>
+      <a (click)="scrollToSection('experience')" style="cursor: pointer;">Experience</a>
+      <a (click)="scrollToSection('skills')" style="cursor: pointer;">Skills</a>
+      <a routerLink="/products" routerLinkActive="active">Products</a>
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </div>
 
@@ -32,9 +33,10 @@
   <!-- Mobile Navigation -->
   <div class="mobile-nav" [class.open]="isMobileMenuOpen">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()">Home</a>
-    <a href="#about" (click)="closeMobileMenu()">About</a>
-    <a href="#experience" (click)="closeMobileMenu()">Experience</a>
-    <a href="#skills" (click)="closeMobileMenu()">Skills</a>
+    <a (click)="scrollToSection('about')" style="cursor: pointer;">About</a>
+    <a (click)="scrollToSection('experience')" style="cursor: pointer;">Experience</a>
+    <a (click)="scrollToSection('skills')" style="cursor: pointer;">Skills</a>
+    <a routerLink="/products" routerLinkActive="active" (click)="closeMobileMenu()">Products</a>
     <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
     <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn-download-mobile" (click)="closeMobileMenu()">
       <i class="fas fa-download"></i>

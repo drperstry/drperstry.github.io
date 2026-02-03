@@ -29,18 +29,14 @@ export class HomeComponent implements OnInit {
 
   experiences: Experience[] = [
     {
-      title: 'Senior Software Engineer',
-      company: 'Albilad Bank',
-      location: 'Riyadh',
-      period: 'Apr 2025 - Present',
+      title: 'Software Engineer Intern',
+      company: 'Saudi Aramco',
+      location: 'Dhahran',
+      period: 'May 2021 - Aug 2021',
       description: [
-        'Designed and implemented a custom notification system for Azure DevOps Work Items',
-        'Improving user experience and expanding reporting and analytics capabilities',
-        'Resolved security vulnerabilities, improving compliance and system stability',
-        'Contributed in building CI/CD pipeline for CRM Platform',
-        'Third level support for production issues'
+        'Implementation of a desktop app and a website based on multiple department requirements'
       ],
-      technologies: ['CRM Dynamics', 'Azure DevOps', 'React', 'JavaScript', '.NET Core', '.NET Framework', 'SQL Server', 'SSIS', 'SSRS', 'IBM MQ', 'HangFire']
+      technologies: ['.NET', 'JavaScript', 'Access DB', 'SQL']
     },
     {
       title: 'Software Engineer',
@@ -69,14 +65,18 @@ export class HomeComponent implements OnInit {
       technologies: ['AWS', 'Google Cloud', 'Jira', 'SQL Server', 'PowerShell', '.NET Core', 'React']
     },
     {
-      title: 'Software Engineer Intern',
-      company: 'Saudi Aramco',
-      location: 'Dhahran',
-      period: 'May 2021 - Aug 2021',
+      title: 'Senior Software Engineer',
+      company: 'Albilad Bank',
+      location: 'Riyadh',
+      period: 'Apr 2025 - Present',
       description: [
-        'Implementation of a desktop app and a website based on multiple department requirements'
+        'Designed and implemented a custom notification system for Azure DevOps Work Items',
+        'Improving user experience and expanding reporting and analytics capabilities',
+        'Resolved security vulnerabilities, improving compliance and system stability',
+        'Contributed in building CI/CD pipeline for CRM Platform',
+        'Third level support for production issues'
       ],
-      technologies: ['.NET', 'JavaScript', 'Access DB', 'SQL']
+      technologies: ['CRM Dynamics', 'Azure DevOps', 'React', 'JavaScript', '.NET Core', '.NET Framework', 'SQL Server', 'SSIS', 'SSRS', 'IBM MQ', 'HangFire']
     }
   ];
 
