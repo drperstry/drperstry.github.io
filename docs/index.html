@@ -24,9 +24,20 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="styles-DL5M2BUL.css"></head>
 <body class="bg-dark text-white">
+  <!-- GitHub Pages SPA redirect handler -->
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+
   <app-root></app-root>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-245YB3HY.js" type="module"></script></body>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-TBJDO743.js" type="module"></script></body>
 </html>
