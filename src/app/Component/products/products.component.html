@@ -1,0 +1,76 @@
+<section class="products-page">
+  <!-- Background Effects -->
+  <div class="products-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <div class="products-container">
+    <!-- Header -->
+    <div class="products-header" data-aos="fade-up">
+      <span class="section-tag">
+        <i class="fab fa-chrome"></i>
+        Chrome Extensions
+      </span>
+      <h1 class="products-title">
+        My <span class="gradient-text">Products</span>
+      </h1>
+      <p class="products-subtitle">
+        Browser extensions I've built to improve everyday web browsing experience.
+        Available for free on the Chrome Web Store.
+      </p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of products; let i = index"
+           [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
+        <div class="product-header">
+          <div class="product-icon">
+            <i [class]="product.icon"></i>
+          </div>
+          <span class="product-category">{{ product.category }}</span>
+        </div>
+
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+
+        <div class="product-features">
+          <h4>Features</h4>
+          <ul>
+            <li *ngFor="let feature of product.features">
+              <i class="fas fa-check"></i>
+              {{ feature }}
+            </li>
+          </ul>
+        </div>
+
+        <a [href]="product.link" target="_blank" rel="noopener" class="product-cta">
+          <i class="fab fa-chrome"></i>
+          Add to Chrome
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- More Coming Soon -->
+    <div class="coming-soon" data-aos="fade-up">
+      <div class="coming-soon-content">
+        <i class="fas fa-rocket"></i>
+        <h3>More Products Coming Soon</h3>
+        <p>I'm always working on new tools and extensions to make life easier. Stay tuned for more!</p>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="products-cta-section" data-aos="fade-up">
+      <h2>Have a product idea?</h2>
+      <p>I'm open to building custom solutions and collaborating on interesting projects.</p>
+      <a routerLink="/contact" class="btn btn-primary">
+        <i class="fas fa-paper-plane"></i>
+        Let's Discuss
+      </a>
+    </div>
+  </div>
+</section>
