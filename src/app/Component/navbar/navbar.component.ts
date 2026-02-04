@@ -35,7 +35,7 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {
           this.performScroll(sectionId);
-        }, 100);
+        }, 150);
       });
     } else {
       this.performScroll(sectionId);
@@ -46,11 +46,35 @@ export class NavbarComponent implements OnInit {
     const element = document.getElementById(sectionId);
     if (element) {
       const navbarHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo({
-        top: elementPosition - navbarHeight,
-        behavior: 'smooth'
-      });
+      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      this.smoothScrollTo(targetPosition, 1000);
     }
+  }
+
+  private smoothScrollTo(targetPosition: number, duration: number): void {
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime: number | null = null;
+
+    const easeInOutCubic = (t: number): number => {
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    };
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      const easedProgress = easeInOutCubic(progress);
+
+      window.scrollTo(0, startPosition + distance * easedProgress);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    };
+
+    requestAnimationFrame(animation);
   }
 }
