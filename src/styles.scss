@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +35,13 @@ body {
   background-color: var(--dark);
   color: #f8fafc;
   line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+// App root container
+app-root {
+  display: block;
   overflow-x: hidden;
 }
 
