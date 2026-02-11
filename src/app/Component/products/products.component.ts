@@ -170,36 +170,6 @@ export class ProductsComponent implements OnInit {
       type: 'python'
     },
     {
-      name: 'PublicKey RSA',
-      description: 'Cryptographic utility for generating asymmetric RSA key pairs and handling encryption/decryption operations.',
-      icon: 'fas fa-key',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/PublicKey-RSA',
-      features: [
-        'RSA key generation',
-        'Asymmetric encryption',
-        'Secure decryption',
-        'Key pair management'
-      ],
-      technologies: ['Python', 'Cryptography', 'RSA Algorithm'],
-      category: 'Python Tool',
-      type: 'python'
-    },
-    {
-      name: 'SymmetricKey AES',
-      description: 'Encryption tool for encrypting and decrypting text files using the symmetric key AES algorithm.',
-      icon: 'fas fa-lock',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/SymmetricKey-AES',
-      features: [
-        'AES encryption',
-        'File encryption',
-        'Secure key handling',
-        'Fast processing'
-      ],
-      technologies: ['Python', 'Cryptography', 'AES Algorithm'],
-      category: 'Python Tool',
-      type: 'python'
-    },
-    {
       name: 'Bulk Delay Subtitle',
       description: 'SRT subtitle file processor for adjusting timing by adding or subtracting delays to sync subtitles with video.',
       icon: 'fas fa-closed-captioning',
@@ -211,36 +181,6 @@ export class ProductsComponent implements OnInit {
         'Positive/negative delays'
       ],
       technologies: ['Python', 'File Processing', 'Regular Expressions'],
-      category: 'Python Tool',
-      type: 'python'
-    },
-    {
-      name: 'Diffie-Hellman',
-      description: 'Key exchange protocol implementation for securely sharing a symmetric key between a client and server.',
-      icon: 'fas fa-exchange-alt',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/diffie-hellman',
-      features: [
-        'Secure key exchange',
-        'Client-server model',
-        'Mathematical key derivation',
-        'Network security'
-      ],
-      technologies: ['Python', 'Cryptography', 'Networking', 'Key Exchange'],
-      category: 'Python Tool',
-      type: 'python'
-    },
-    {
-      name: 'isPrime',
-      description: 'Prime number detection tool showcasing optimization techniques for efficiently finding prime numbers.',
-      icon: 'fas fa-calculator',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/isPrime',
-      features: [
-        'Prime number detection',
-        'Optimized algorithms',
-        'Performance focused',
-        'Educational example'
-      ],
-      technologies: ['Python', 'Algorithms', 'Mathematics', 'Jupyter Notebook'],
       category: 'Python Tool',
       type: 'python'
     }
