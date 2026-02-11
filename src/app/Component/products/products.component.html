@@ -45,6 +45,13 @@
           </ul>
         </div>
 
+        <div class="product-technologies">
+          <h4>Technologies</h4>
+          <div class="tech-tags">
+            <span class="tech-tag" *ngFor="let tech of product.technologies">{{ tech }}</span>
+          </div>
+        </div>
+
         <a [href]="product.link" target="_blank" rel="noopener" class="product-cta" [class.web-cta]="product.type === 'web'">
           <ng-container *ngIf="product.type === 'chrome'">
             <i class="fab fa-chrome"></i>

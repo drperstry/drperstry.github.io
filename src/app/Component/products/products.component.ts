@@ -6,6 +6,7 @@ interface Product {
   icon: string;
   link: string;
   features: string[];
+  technologies: string[];
   category: string;
   type: 'chrome' | 'web';
 }
@@ -29,6 +30,7 @@ export class ProductsComponent implements OnInit {
         'Smooth scrolling animation',
         'Works on any webpage'
       ],
+      technologies: ['JavaScript', 'Chrome APIs', 'HTML', 'CSS'],
       category: 'Chrome Extension',
       type: 'chrome'
     },
@@ -43,6 +45,7 @@ export class ProductsComponent implements OnInit {
         'Notification alerts',
         'Lightweight & fast'
       ],
+      technologies: ['JavaScript', 'Chrome APIs', 'HTML', 'CSS'],
       category: 'Chrome Extension',
       type: 'chrome'
     },
@@ -57,6 +60,7 @@ export class ProductsComponent implements OnInit {
         'Customizable alerts',
         'Team collaboration'
       ],
+      technologies: ['React', 'TypeScript', 'Azure DevOps API', 'Vercel', 'Tailwind CSS'],
       category: 'Web App',
       type: 'web'
     },
@@ -71,6 +75,7 @@ export class ProductsComponent implements OnInit {
         'Member profiles',
         'Communication hub'
       ],
+      technologies: ['React', 'Next.js', 'TypeScript', 'Vercel', 'Tailwind CSS'],
       category: 'Web App',
       type: 'web'
     },
@@ -85,6 +90,7 @@ export class ProductsComponent implements OnInit {
         'Fast performance',
         'SEO optimized'
       ],
+      technologies: ['React', 'Next.js', 'TypeScript', 'Vercel', 'Tailwind CSS'],
       category: 'Web App',
       type: 'web'
     }
