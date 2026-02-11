@@ -53,7 +53,7 @@ export class ProductsComponent implements OnInit {
       name: 'Work Item Notification',
       description: 'A notification system for Azure DevOps Work Items. Get real-time alerts and updates on work item changes, assignments, and status updates.',
       icon: 'fas fa-bell',
-      link: 'https://work-item-notification.vercel.app',
+      link: 'https://update-dev.vercel.app',
       features: [
         'Real-time notifications',
         'Azure DevOps integration',
@@ -65,10 +65,10 @@ export class ProductsComponent implements OnInit {
       type: 'web'
     },
     {
-      name: 'Family Site',
+      name: 'Family Unit',
       description: 'A family management platform to organize events, share memories, and stay connected with loved ones. Keep your family organized and engaged.',
       icon: 'fas fa-users',
-      link: 'https://family-site.vercel.app',
+      link: '',
       features: [
         'Family event calendar',
         'Photo sharing',
@@ -80,10 +80,10 @@ export class ProductsComponent implements OnInit {
       type: 'web'
     },
     {
-      name: 'Almoosa Site',
+      name: 'Almoosa Family Site',
       description: 'A professional website showcasing services and information. Built with modern technologies for optimal performance and user experience.',
       icon: 'fas fa-globe',
-      link: 'https://almoosa-site.vercel.app',
+      link: 'https://almoosa-family.vercel.app',
       features: [
         'Modern design',
         'Responsive layout',
