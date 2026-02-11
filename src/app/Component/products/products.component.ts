@@ -53,7 +53,7 @@ export class ProductsComponent implements OnInit {
       name: 'Work Item Notification',
       description: 'A notification system for Azure DevOps Work Items. Get real-time alerts and updates on work item changes, assignments, and status updates.',
       icon: 'fas fa-bell',
-      link: 'https://work-item-notification.vercel.app',
+      link: 'https://update-dev.vercel.app',
       features: [
         'Real-time notifications',
         'Azure DevOps integration',
@@ -65,10 +65,10 @@ export class ProductsComponent implements OnInit {
       type: 'web'
     },
     {
-      name: 'Family Site',
+      name: 'Family Unit',
       description: 'A family management platform to organize events, share memories, and stay connected with loved ones. Keep your family organized and engaged.',
       icon: 'fas fa-users',
-      link: 'https://family-site.vercel.app',
+      link: '',
       features: [
         'Family event calendar',
         'Photo sharing',
@@ -80,10 +80,10 @@ export class ProductsComponent implements OnInit {
       type: 'web'
     },
     {
-      name: 'Almoosa Site',
+      name: 'Almoosa Family Site',
       description: 'A professional website showcasing services and information. Built with modern technologies for optimal performance and user experience.',
       icon: 'fas fa-globe',
-      link: 'https://almoosa-site.vercel.app',
+      link: 'https://almoosa-family.vercel.app',
       features: [
         'Modern design',
         'Responsive layout',
@@ -98,7 +98,7 @@ export class ProductsComponent implements OnInit {
       name: 'Detect & Port Scanner',
       description: 'Network security tool that identifies port scanning activity by monitoring for 15 or more consecutive ports within a 5 second window from a single source.',
       icon: 'fas fa-network-wired',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/Detect%26PortScanner',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/Detect%26PortScanner',
       features: [
         'Port scan detection',
         'Real-time monitoring',
@@ -110,25 +110,10 @@ export class ProductsComponent implements OnInit {
       type: 'python'
     },
     {
-      name: 'Frequency Analysis',
-      description: 'Text analysis utility that finds the frequency of every letter in a text file. Useful for cryptography and linguistic analysis.',
-      icon: 'fas fa-chart-bar',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/FreqAnalysis',
-      features: [
-        'Letter frequency counting',
-        'Text file processing',
-        'Statistical analysis',
-        'Cryptography helper'
-      ],
-      technologies: ['Python', 'File I/O', 'Data Analysis'],
-      category: 'Python Tool',
-      type: 'python'
-    },
-    {
       name: 'GPA Calculator',
       description: 'Academic tool that processes course records with weights and letter grades to compute GPA accurately.',
       icon: 'fas fa-graduation-cap',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/GPA_calculator',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/GPA_calculator',
       features: [
         'Weighted GPA calculation',
         'Multiple grading scales',
@@ -143,7 +128,7 @@ export class ProductsComponent implements OnInit {
       name: 'K-Anonymization',
       description: 'Data privacy implementation applying the K-Anonymization algorithm for anonymizing datasets and protecting sensitive information.',
       icon: 'fas fa-user-secret',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/K-Anonymization',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/K-Anonymization',
       features: [
         'Dataset anonymization',
         'Privacy protection',
@@ -158,7 +143,7 @@ export class ProductsComponent implements OnInit {
       name: 'PicSteg',
       description: 'Image steganography application with Hide/Unhide modes for embedding and extracting secret data within images.',
       icon: 'fas fa-image',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/PicSteg',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/PicSteg',
       features: [
         'Hide data in images',
         'Extract hidden data',
@@ -173,7 +158,7 @@ export class ProductsComponent implements OnInit {
       name: 'Bulk Delay Subtitle',
       description: 'SRT subtitle file processor for adjusting timing by adding or subtracting delays to sync subtitles with video.',
       icon: 'fas fa-closed-captioning',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/bulk-delay%20Subtitle',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/bulk-delay%20Subtitle',
       features: [
         'Subtitle time adjustment',
         'Bulk processing',
