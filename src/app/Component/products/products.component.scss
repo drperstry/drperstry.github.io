@@ -167,6 +167,10 @@
   &.web-icon {
     background: linear-gradient(135deg, #06b6d4, #0891b2);
   }
+
+  &.python-icon {
+    background: linear-gradient(135deg, #3776ab, #ffd43b);
+  }
 }
 
 .product-category {
@@ -182,6 +186,12 @@
     background: rgba(6, 182, 212, 0.1);
     border-color: rgba(6, 182, 212, 0.2);
     color: #06b6d4;
+  }
+
+  &.python-category {
+    background: rgba(55, 118, 171, 0.1);
+    border-color: rgba(55, 118, 171, 0.2);
+    color: #3776ab;
   }
 }
 
@@ -288,6 +298,14 @@
 
     &:hover {
       box-shadow: 0 15px 35px rgba(6, 182, 212, 0.4);
+    }
+  }
+
+  &.python-cta {
+    background: linear-gradient(135deg, #3776ab, #306998);
+
+    &:hover {
+      box-shadow: 0 15px 35px rgba(55, 118, 171, 0.4);
     }
   }
 
