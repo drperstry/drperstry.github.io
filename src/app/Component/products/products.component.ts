@@ -98,7 +98,7 @@ export class ProductsComponent implements OnInit {
       name: 'Detect & Port Scanner',
       description: 'Network security tool that identifies port scanning activity by monitoring for 15 or more consecutive ports within a 5 second window from a single source.',
       icon: 'fas fa-network-wired',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/Detect%26PortScanner',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/Detect%26PortScanner',
       features: [
         'Port scan detection',
         'Real-time monitoring',
@@ -113,7 +113,7 @@ export class ProductsComponent implements OnInit {
       name: 'Frequency Analysis',
       description: 'Text analysis utility that finds the frequency of every letter in a text file. Useful for cryptography and linguistic analysis.',
       icon: 'fas fa-chart-bar',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/FreqAnalysis',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/FreqAnalysis',
       features: [
         'Letter frequency counting',
         'Text file processing',
@@ -128,7 +128,7 @@ export class ProductsComponent implements OnInit {
       name: 'GPA Calculator',
       description: 'Academic tool that processes course records with weights and letter grades to compute GPA accurately.',
       icon: 'fas fa-graduation-cap',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/GPA_calculator',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/GPA_calculator',
       features: [
         'Weighted GPA calculation',
         'Multiple grading scales',
@@ -143,7 +143,7 @@ export class ProductsComponent implements OnInit {
       name: 'K-Anonymization',
       description: 'Data privacy implementation applying the K-Anonymization algorithm for anonymizing datasets and protecting sensitive information.',
       icon: 'fas fa-user-secret',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/K-Anonymization',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/K-Anonymization',
       features: [
         'Dataset anonymization',
         'Privacy protection',
@@ -158,7 +158,7 @@ export class ProductsComponent implements OnInit {
       name: 'PicSteg',
       description: 'Image steganography application with Hide/Unhide modes for embedding and extracting secret data within images.',
       icon: 'fas fa-image',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/PicSteg',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/PicSteg',
       features: [
         'Hide data in images',
         'Extract hidden data',
@@ -173,7 +173,7 @@ export class ProductsComponent implements OnInit {
       name: 'PublicKey RSA',
       description: 'Cryptographic utility for generating asymmetric RSA key pairs and handling encryption/decryption operations.',
       icon: 'fas fa-key',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/PublicKey-RSA',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/PublicKey-RSA',
       features: [
         'RSA key generation',
         'Asymmetric encryption',
@@ -188,7 +188,7 @@ export class ProductsComponent implements OnInit {
       name: 'SymmetricKey AES',
       description: 'Encryption tool for encrypting and decrypting text files using the symmetric key AES algorithm.',
       icon: 'fas fa-lock',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/SymmetricKey-AES',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/SymmetricKey-AES',
       features: [
         'AES encryption',
         'File encryption',
@@ -203,7 +203,7 @@ export class ProductsComponent implements OnInit {
       name: 'Bulk Delay Subtitle',
       description: 'SRT subtitle file processor for adjusting timing by adding or subtracting delays to sync subtitles with video.',
       icon: 'fas fa-closed-captioning',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/bulk-delay%20Subtitle',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/bulk-delay%20Subtitle',
       features: [
         'Subtitle time adjustment',
         'Bulk processing',
@@ -218,7 +218,7 @@ export class ProductsComponent implements OnInit {
       name: 'Diffie-Hellman',
       description: 'Key exchange protocol implementation for securely sharing a symmetric key between a client and server.',
       icon: 'fas fa-exchange-alt',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/diffie-hellman',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/diffie-hellman',
       features: [
         'Secure key exchange',
         'Client-server model',
@@ -233,7 +233,7 @@ export class ProductsComponent implements OnInit {
       name: 'isPrime',
       description: 'Prime number detection tool showcasing optimization techniques for efficiently finding prime numbers.',
       icon: 'fas fa-calculator',
-      link: 'https://github.com/drperstry/SimpleTools/tree/main/isPrime',
+      link: 'https://github.com/drperstry/SimpleTools/tree/master/isPrime',
       features: [
         'Prime number detection',
         'Optimized algorithms',
