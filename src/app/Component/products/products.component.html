@@ -10,15 +10,14 @@
     <!-- Header -->
     <div class="products-header" data-aos="fade-up">
       <span class="section-tag">
-        <i class="fab fa-chrome"></i>
-        Chrome Extensions
+        <i class="fas fa-rocket"></i>
+        Projects & Tools
       </span>
       <h1 class="products-title">
         My <span class="gradient-text">Products</span>
       </h1>
       <p class="products-subtitle">
-        Browser extensions I've built to improve everyday web browsing experience.
-        Available for free on the Chrome Web Store.
+        Web applications, browser extensions, and Python tools I've built to solve real-world problems.
       </p>
     </div>
 
@@ -27,10 +26,10 @@
       <div class="product-card" *ngFor="let product of products; let i = index"
            [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="i * 100">
         <div class="product-header">
-          <div class="product-icon">
+          <div class="product-icon" [class.web-icon]="product.type === 'web'" [class.python-icon]="product.type === 'python'">
             <i [class]="product.icon"></i>
           </div>
-          <span class="product-category">{{ product.category }}</span>
+          <span class="product-category" [class.web-category]="product.type === 'web'" [class.python-category]="product.type === 'python'">{{ product.category }}</span>
         </div>
 
         <h2 class="product-name">{{ product.name }}</h2>
@@ -46,20 +45,27 @@
           </ul>
         </div>
 
-        <a [href]="product.link" target="_blank" rel="noopener" class="product-cta">
-          <i class="fab fa-chrome"></i>
-          Add to Chrome
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
+        <div class="product-technologies">
+          <h4>Technologies</h4>
+          <div class="tech-tags">
+            <span class="tech-tag" *ngFor="let tech of product.technologies">{{ tech }}</span>
+          </div>
+        </div>
 
-    <!-- More Coming Soon -->
-    <div class="coming-soon" data-aos="fade-up">
-      <div class="coming-soon-content">
-        <i class="fas fa-rocket"></i>
-        <h3>More Products Coming Soon</h3>
-        <p>I'm always working on new tools and extensions to make life easier. Stay tuned for more!</p>
+        <a [href]="product.link" target="_blank" rel="noopener" class="product-cta" [class.web-cta]="product.type === 'web'" [class.python-cta]="product.type === 'python'">
+          <ng-container *ngIf="product.type === 'chrome'">
+            <i class="fab fa-chrome"></i>
+            Add to Chrome
+          </ng-container>
+          <ng-container *ngIf="product.type === 'web'">
+            <i class="fas fa-external-link-alt"></i>
+            Visit Site
+          </ng-container>
+          <ng-container *ngIf="product.type === 'python'">
+            <i class="fab fa-github"></i>
+            View on GitHub
+          </ng-container>
+        </a>
       </div>
     </div>
 
