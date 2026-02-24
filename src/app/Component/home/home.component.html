@@ -7,24 +7,21 @@
   </div>
 
   <div class="hero-content" data-aos="fade-up">
-    <span class="hero-greeting">Hello, I'm</span>
-    <h1 class="hero-name">Abdulrahman <span class="gradient-text">Alhuwais</span></h1>
+    <span class="hero-greeting">{{ 'hero.greeting' | translate }}</span>
+    <h1 class="hero-name">{{ 'hero.name' | translate }}</h1>
     <div class="hero-role">
       <span class="role-text">{{ displayedRole }}</span>
       <span class="cursor" [class.typing]="isTyping">|</span>
     </div>
-    <p class="hero-description">
-      Senior Software Engineer with strong experience in banking and enterprise systems,
-      focused on quality improvement, reliability, and business impact.
-    </p>
+    <p class="hero-description">{{ 'hero.description' | translate }}</p>
     <div class="hero-cta">
       <a routerLink="/contact" class="btn btn-primary">
         <i class="fas fa-paper-plane"></i>
-        Get In Touch
+        {{ 'hero.contactBtn' | translate }}
       </a>
       <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn btn-outline">
         <i class="fas fa-download"></i>
-        Download CV
+        {{ 'nav.downloadResume' | translate }}
       </a>
     </div>
     <div class="hero-socials">
@@ -41,7 +38,6 @@
   </div>
 
   <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
-    <span>Scroll Down</span>
     <div class="scroll-arrow">
       <i class="fas fa-chevron-down"></i>
     </div>
@@ -51,54 +47,36 @@
 <!-- About Section -->
 <section class="about section" id="about">
   <div class="container-custom">
-    <h2 class="section-title" data-aos="fade-up">About Me</h2>
-    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-      Passionate about building robust systems and driving technical excellence
-    </p>
+    <span class="section-tag" data-aos="fade-up">
+      <i class="fas fa-user"></i>
+      {{ 'about.tag' | translate }}
+    </span>
+    <h2 class="section-title" data-aos="fade-up">{{ 'about.title' | translate }}</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">{{ 'about.subtitle' | translate }}</p>
 
     <div class="about-content">
       <div class="about-text" data-aos="fade-right">
-        <div class="about-card">
-          <div class="about-icon">
-            <i class="fas fa-user-graduate"></i>
-          </div>
-          <div class="about-info">
-            <h3>Education</h3>
-            <p class="degree">Bachelor's Degree - Software Engineering</p>
-            <p class="school">King Fahd University of Petroleum and Minerals</p>
-            <p class="honors">Graduated with Honor Class</p>
-            <p class="concentration">Cyber Security and Blockchain concentration</p>
-          </div>
-        </div>
+        <p class="about-bio">{{ 'about.bio1' | translate }}</p>
+        <p class="about-bio">{{ 'about.bio2' | translate }}</p>
 
         <div class="about-card">
           <div class="about-icon">
-            <i class="fas fa-briefcase"></i>
+            <i class="fas fa-graduation-cap"></i>
           </div>
           <div class="about-info">
-            <h3>Professional Focus</h3>
-            <p>Proven track record in CRM platforms, backend services, DevOps automation, and operational tooling.
-               I specialize in building enterprise-grade solutions that improve business processes and system reliability.</p>
+            <h3>{{ 'about.education.label' | translate }}</h3>
+            <p class="degree">{{ 'about.education.degree' | translate }}</p>
+            <p class="school">{{ 'about.education.university' | translate }}</p>
+            <p class="period">{{ 'about.education.period' | translate }}</p>
+            <p class="gpa">{{ 'about.education.gpa' | translate }}</p>
           </div>
         </div>
       </div>
 
       <div class="about-stats" data-aos="fade-left">
-        <div class="stat-card">
-          <span class="stat-number">3+</span>
-          <span class="stat-label">Years Experience</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Companies</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Projects</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-number">15+</span>
-          <span class="stat-label">Technologies</span>
+        <div class="stat-card" *ngFor="let stat of stats">
+          <span class="stat-number">{{ stat.value }}</span>
+          <span class="stat-label">{{ stat.label }}</span>
         </div>
       </div>
     </div>
@@ -108,10 +86,12 @@
 <!-- Experience Section -->
 <section class="experience section" id="experience">
   <div class="container-custom">
-    <h2 class="section-title" data-aos="fade-up">Experience</h2>
-    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-      My professional journey in software engineering
-    </p>
+    <span class="section-tag" data-aos="fade-up">
+      <i class="fas fa-briefcase"></i>
+      {{ 'experience.tag' | translate }}
+    </span>
+    <h2 class="section-title" data-aos="fade-up">{{ 'experience.title' | translate }}</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">{{ 'experience.subtitle' | translate }}</p>
 
     <div class="timeline">
       <div class="timeline-item" *ngFor="let exp of experiences; let i = index"
@@ -149,17 +129,18 @@
 <!-- Skills Section -->
 <section class="skills section" id="skills">
   <div class="container-custom">
-    <h2 class="section-title" data-aos="fade-up">Skills</h2>
-    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-      Technologies and expertise I bring to the table
-    </p>
+    <span class="section-tag" data-aos="fade-up">
+      <i class="fas fa-cog"></i>
+      {{ 'skills.tag' | translate }}
+    </span>
+    <h2 class="section-title" data-aos="fade-up">{{ 'skills.title' | translate }}</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">{{ 'skills.subtitle' | translate }}</p>
 
     <div class="skills-grid">
-      <!-- Technical Skills -->
       <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
         <h3 class="category-title">
           <i class="fas fa-code"></i>
-          Technical Skills
+          {{ 'skills.hardSkillsTitle' | translate }}
         </h3>
         <div class="skills-list">
           <div class="skill-item" *ngFor="let skill of hardSkills; let i = index"
@@ -178,11 +159,10 @@
         </div>
       </div>
 
-      <!-- Soft Skills -->
       <div class="skills-category soft-skills" data-aos="fade-up" data-aos-delay="300">
         <h3 class="category-title">
           <i class="fas fa-users"></i>
-          Soft Skills
+          {{ 'skills.softSkillsTitle' | translate }}
         </h3>
         <div class="soft-skills-grid">
           <div class="soft-skill-card" *ngFor="let skill of softSkills; let i = index"
@@ -200,16 +180,16 @@
 <section class="cta-section" data-aos="fade-up">
   <div class="container-custom">
     <div class="cta-content">
-      <h2>Interested in working together?</h2>
-      <p>I'm always open to discussing new opportunities and challenges.</p>
+      <h2>{{ 'products.ctaTitle' | translate }}</h2>
+      <p>{{ 'products.ctaSubtitle' | translate }}</p>
       <div class="cta-buttons">
         <a routerLink="/contact" class="btn btn-primary">
           <i class="fas fa-envelope"></i>
-          Contact Me
+          {{ 'nav.contact' | translate }}
         </a>
         <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn btn-outline">
           <i class="fas fa-file-pdf"></i>
-          View Resume
+          {{ 'nav.downloadResume' | translate }}
         </a>
       </div>
     </div>

@@ -1,5 +1,4 @@
 <section class="contact-page">
-  <!-- Background Elements -->
   <div class="contact-background">
     <div class="gradient-orb orb-1"></div>
     <div class="gradient-orb orb-2"></div>
@@ -7,31 +6,23 @@
   </div>
 
   <div class="contact-container">
-    <!-- Header -->
     <div class="contact-header" data-aos="fade-up">
-      <span class="section-tag">Get In Touch</span>
-      <h1 class="contact-title">Let's Work <span class="gradient-text">Together</span></h1>
-      <p class="contact-subtitle">
-        I'm always open to discussing new opportunities, interesting projects, or partnerships.
-        Feel free to reach out through any of the channels below.
-      </p>
+      <span class="section-tag">
+        <i class="fas fa-satellite-dish"></i>
+        {{ 'contact.tag' | translate }}
+      </span>
+      <h1 class="contact-title">{{ 'contact.title' | translate }}</h1>
+      <p class="contact-subtitle">{{ 'contact.subtitle' | translate }}</p>
     </div>
 
     <div class="contact-content">
-      <!-- Contact Methods Grid -->
+      <!-- Contact Methods -->
       <div class="contact-methods" data-aos="fade-right">
-        <h2 class="methods-title">
-          <i class="fas fa-satellite-dish"></i>
-          Contact Information
-        </h2>
         <div class="methods-grid">
           <a *ngFor="let method of contactMethods; let i = index"
-             [href]="method.link"
-             target="_blank"
-             rel="noopener"
+             [href]="method.link" target="_blank" rel="noopener"
              class="contact-card"
-             [attr.data-aos]="'zoom-in'"
-             [attr.data-aos-delay]="i * 100">
+             [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="i * 80">
             <div class="card-icon" [style.background]="'linear-gradient(135deg, ' + method.color + '22, ' + method.color + '44)'">
               <i [class]="method.icon" [style.color]="method.color"></i>
             </div>
@@ -43,14 +34,11 @@
           </a>
         </div>
 
-        <!-- Download CV Card -->
         <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="download-card" data-aos="fade-up">
-          <div class="download-icon">
-            <i class="fas fa-file-pdf"></i>
-          </div>
+          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
           <div class="download-content">
-            <span class="download-title">Download My Resume</span>
-            <span class="download-subtitle">Get a copy of my CV in PDF format</span>
+            <span class="download-title">{{ 'nav.downloadResume' | translate }}</span>
+            <span class="download-subtitle">PDF format</span>
           </div>
           <i class="fas fa-download download-arrow"></i>
         </a>
@@ -60,7 +48,7 @@
       <div class="contact-form-wrapper" data-aos="fade-left">
         <h2 class="form-title">
           <i class="fas fa-paper-plane"></i>
-          Send Me a Message
+          {{ 'contact.sendBtn' | translate }}
         </h2>
 
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
@@ -68,103 +56,64 @@
             <div class="form-group">
               <label for="name">
                 <i class="fas fa-user"></i>
-                Your Name
+                {{ 'contact.nameLabel' | translate }}
               </label>
-              <input
-                type="text"
-                id="name"
-                formControlName="name"
-                placeholder="John Doe"
-                [class.error]="isFieldInvalid('name')">
-              <span class="error-message" *ngIf="isFieldInvalid('name')">
-                {{ getFieldError('name') }}
-              </span>
+              <input type="text" id="name" formControlName="name"
+                     [placeholder]="'contact.namePlaceholder' | translate"
+                     [class.error]="isFieldInvalid('name')">
+              <span class="error-message" *ngIf="isFieldInvalid('name')">Required (min 2 chars)</span>
             </div>
 
             <div class="form-group">
               <label for="email">
                 <i class="fas fa-envelope"></i>
-                Your Email
+                {{ 'contact.emailLabel' | translate }}
               </label>
-              <input
-                type="email"
-                id="email"
-                formControlName="email"
-                placeholder="john@example.com"
-                [class.error]="isFieldInvalid('email')">
-              <span class="error-message" *ngIf="isFieldInvalid('email')">
-                {{ getFieldError('email') }}
-              </span>
+              <input type="email" id="email" formControlName="email"
+                     [placeholder]="'contact.emailPlaceholder' | translate"
+                     [class.error]="isFieldInvalid('email')">
+              <span class="error-message" *ngIf="isFieldInvalid('email')">Valid email required</span>
             </div>
           </div>
 
           <div class="form-group">
             <label for="subject">
               <i class="fas fa-tag"></i>
-              Subject
+              {{ 'contact.subjectLabel' | translate }}
             </label>
-            <input
-              type="text"
-              id="subject"
-              formControlName="subject"
-              placeholder="What's this about?"
-              [class.error]="isFieldInvalid('subject')">
-            <span class="error-message" *ngIf="isFieldInvalid('subject')">
-              {{ getFieldError('subject') }}
-            </span>
+            <input type="text" id="subject" formControlName="subject"
+                   [placeholder]="'contact.subjectPlaceholder' | translate"
+                   [class.error]="isFieldInvalid('subject')">
+            <span class="error-message" *ngIf="isFieldInvalid('subject')">Subject is required</span>
           </div>
 
           <div class="form-group">
             <label for="message">
               <i class="fas fa-comment-alt"></i>
-              Message
+              {{ 'contact.messageLabel' | translate }}
             </label>
-            <textarea
-              id="message"
-              formControlName="message"
-              rows="5"
-              placeholder="Tell me more about your project or inquiry..."
-              [class.error]="isFieldInvalid('message')"></textarea>
-            <span class="error-message" *ngIf="isFieldInvalid('message')">
-              {{ getFieldError('message') }}
-            </span>
+            <textarea id="message" formControlName="message" rows="5"
+                      [placeholder]="'contact.messagePlaceholder' | translate"
+                      [class.error]="isFieldInvalid('message')"></textarea>
+            <span class="error-message" *ngIf="isFieldInvalid('message')">Required (min 10 chars)</span>
           </div>
 
-          <button
-            type="submit"
-            class="submit-btn"
-            [disabled]="isSubmitting"
-            [class.submitting]="isSubmitting">
+          <button type="submit" class="submit-btn" [disabled]="isSubmitting" [class.submitting]="isSubmitting">
             <span *ngIf="!isSubmitting">
               <i class="fas fa-paper-plane"></i>
-              Send Message
+              {{ 'contact.sendBtn' | translate }}
             </span>
             <span *ngIf="isSubmitting" class="loading">
               <i class="fas fa-spinner fa-spin"></i>
-              Sending...
+              {{ 'contact.sendingBtn' | translate }}
             </span>
           </button>
 
-          <!-- Success Message -->
           <div class="success-message" *ngIf="submitSuccess" data-aos="fade-up">
             <i class="fas fa-check-circle"></i>
-            <span>Your email client should open. If not, please email me directly!</span>
+            <span>{{ 'contact.successMsg' | translate }}</span>
           </div>
         </form>
-      </div>
-    </div>
-
-    <!-- Map/Location Section -->
-    <div class="location-section" data-aos="fade-up">
-      <div class="location-card">
-        <div class="location-info">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <h3>Based in Riyadh</h3>
-            <p>Saudi Arabia</p>
-          </div>
-        </div>
-        <p class="location-note">Open to remote opportunities worldwide</p>
       </div>
     </div>
   </div>

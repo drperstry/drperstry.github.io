@@ -8,19 +8,33 @@
 
     <!-- Desktop Navigation -->
     <div class="nav-links desktop-nav">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-      <a (click)="scrollToSection('about')" style="cursor: pointer;">About</a>
-      <a (click)="scrollToSection('experience')" style="cursor: pointer;">Experience</a>
-      <a (click)="scrollToSection('skills')" style="cursor: pointer;">Skills</a>
-      <a routerLink="/products" routerLinkActive="active">Products</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{ 'nav.home' | translate }}</a>
+      <a (click)="scrollToSection('about')" style="cursor: pointer;">{{ 'nav.about' | translate }}</a>
+      <a (click)="scrollToSection('experience')" style="cursor: pointer;">{{ 'nav.experience' | translate }}</a>
+      <a (click)="scrollToSection('skills')" style="cursor: pointer;">{{ 'nav.skills' | translate }}</a>
+      <a routerLink="/products" routerLinkActive="active">{{ 'nav.products' | translate }}</a>
+      <a routerLink="/contact" routerLinkActive="active">{{ 'nav.contact' | translate }}</a>
     </div>
 
-    <!-- CTA Button -->
-    <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn-download desktop-nav">
-      <i class="fas fa-download"></i>
-      Resume
-    </a>
+    <!-- Controls -->
+    <div class="nav-controls desktop-nav">
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" (click)="switchTheme()" [title]="currentTheme === 'dark' ? ('theme.light' | translate) : ('theme.dark' | translate)">
+        <i class="fas" [class.fa-sun]="currentTheme === 'dark'" [class.fa-moon]="currentTheme === 'light'"></i>
+      </button>
+
+      <!-- Language Toggle -->
+      <button class="lang-toggle" (click)="switchLanguage()">
+        <i class="fas fa-globe"></i>
+        {{ currentLang === 'en' ? 'AR' : 'EN' }}
+      </button>
+
+      <!-- Resume -->
+      <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn-download">
+        <i class="fas fa-download"></i>
+        {{ 'nav.downloadResume' | translate }}
+      </a>
+    </div>
 
     <!-- Mobile Menu Button -->
     <button class="mobile-menu-btn" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
@@ -32,15 +46,25 @@
 
   <!-- Mobile Navigation -->
   <div class="mobile-nav" [class.open]="isMobileMenuOpen">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()">Home</a>
-    <a (click)="scrollToSection('about')" style="cursor: pointer;">About</a>
-    <a (click)="scrollToSection('experience')" style="cursor: pointer;">Experience</a>
-    <a (click)="scrollToSection('skills')" style="cursor: pointer;">Skills</a>
-    <a routerLink="/products" routerLinkActive="active" (click)="closeMobileMenu()">Products</a>
-    <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a>
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()">{{ 'nav.home' | translate }}</a>
+    <a (click)="scrollToSection('about')" style="cursor: pointer;">{{ 'nav.about' | translate }}</a>
+    <a (click)="scrollToSection('experience')" style="cursor: pointer;">{{ 'nav.experience' | translate }}</a>
+    <a (click)="scrollToSection('skills')" style="cursor: pointer;">{{ 'nav.skills' | translate }}</a>
+    <a routerLink="/products" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'nav.products' | translate }}</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">{{ 'nav.contact' | translate }}</a>
+    <div class="mobile-controls">
+      <button class="theme-toggle" (click)="switchTheme()">
+        <i class="fas" [class.fa-sun]="currentTheme === 'dark'" [class.fa-moon]="currentTheme === 'light'"></i>
+        {{ currentTheme === 'dark' ? ('theme.light' | translate) : ('theme.dark' | translate) }}
+      </button>
+      <button class="lang-toggle" (click)="switchLanguage()">
+        <i class="fas fa-globe"></i>
+        {{ currentLang === 'en' ? 'AR' : 'EN' }}
+      </button>
+    </div>
     <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn-download-mobile" (click)="closeMobileMenu()">
       <i class="fas fa-download"></i>
-      Download Resume
+      {{ 'nav.downloadResume' | translate }}
     </a>
   </div>
 </nav>

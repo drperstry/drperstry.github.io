@@ -1,0 +1,263 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "عني",
+    "experience": "الخبرة",
+    "skills": "المهارات",
+    "products": "المنتجات",
+    "contact": "تواصل معي",
+    "downloadResume": "تحميل السيرة الذاتية"
+  },
+  "hero": {
+    "greeting": "مرحباً، أنا",
+    "name": "عبدالرحمن هويس",
+    "roles": ["مهندس برمجيات أول", "مهندس DevOps", "متخصص CRM", "حلّال مشكلات"],
+    "description": "مهندس برمجيات شغوف بخبرة في الحلول المؤسسية ومنصات CRM وممارسات DevOps.",
+    "cta": "عرض أعمالي",
+    "contactBtn": "تواصل معي"
+  },
+  "about": {
+    "tag": "من أنا",
+    "title": "عني",
+    "subtitle": "مهندس برمجيات متحمس مكرّس لبناء حلول قابلة للتوسع وذات تأثير حقيقي.",
+    "bio1": "أنا مهندس برمجيات أول بخبرة مهنية تتجاوز 3 سنوات في تطوير البرمجيات المؤسسية ومنصات CRM وهندسة DevOps. أتخصص في بناء حلول قوية وقابلة للتوسع تحدث تأثيراً حقيقياً.",
+    "bio2": "مسيرتي المهنية تمتد عبر كبرى المؤسسات المالية السعودية بما فيها أرامكو السعودية وبنك الراجحي وبنك البلاد، حيث قدت تطوير أنظمة حيوية وحسّنت الكفاءة التشغيلية.",
+    "education": {
+      "label": "التعليم",
+      "degree": "بكالوريوس علوم الحاسب",
+      "university": "جامعة الإمام عبدالرحمن بن فيصل",
+      "period": "2018 – 2022",
+      "gpa": "المعدل: 4.53 / 5.0"
+    },
+    "stats": [
+      { "value": "+3", "label": "سنوات خبرة" },
+      { "value": "4", "label": "شركات" },
+      { "value": "+10", "label": "مشاريع منجزة" },
+      { "value": "2", "label": "إضافات كروم" }
+    ]
+  },
+  "experience": {
+    "tag": "المسيرة المهنية",
+    "title": "الخبرة العملية",
+    "subtitle": "رحلتي المهنية عبر كبرى المنظمات في المملكة العربية السعودية.",
+    "items": [
+      {
+        "title": "متدرب مهندس برمجيات",
+        "company": "أرامكو السعودية",
+        "location": "الظهران",
+        "period": "مايو 2021 – أغسطس 2021",
+        "description": [
+          "تطوير تطبيق سطح مكتب وموقع إلكتروني بناءً على متطلبات أقسام متعددة"
+        ],
+        "technologies": [".NET", "JavaScript", "Access DB", "SQL"]
+      },
+      {
+        "title": "مهندس برمجيات",
+        "company": "إيجادة وبنك الراجحي",
+        "location": "الرياض",
+        "period": "أكتوبر 2022 – أبريل 2025",
+        "description": [
+          "تطوير خدمات WCF وأنشطة مخصصة وإضافات وتخصيصات",
+          "تصميم وتنفيذ مسار CI/CD مخصص لحلول CRM",
+          "بناء أدوات تشغيلية ومراقبة لتتبع صحة النظام وتنفيذ مهام إدارية",
+          "تحسين جودة التسليم بمراجعة المشاريع والتعرف المبكر على المخاطر وتوصية أفضل الممارسات"
+        ],
+        "technologies": ["CRM Dynamics", "Jira", "Angular", "JavaScript", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ"]
+      },
+      {
+        "title": "مهندس DevOps",
+        "company": "منذر",
+        "location": "الرياض",
+        "period": "يوليو 2024 – أكتوبر 2024",
+        "description": [
+          "قالب CI/CD عبر Bitbucket على IIS",
+          "مهمة ETL من استخراج البيانات عبر واجهات برمجة المواقع إلى تحويلها وتحميلها في قاعدة بيانات جديدة",
+          "صيانة مزودي الخدمة السحابية وترحيل SQL السحابي وأصول أخرى",
+          "أتمتة المهام الإدارية بوظائف صيانة SQL ونصوص PowerShell"
+        ],
+        "technologies": ["AWS", "Google Cloud", "Jira", "SQL Server", "PowerShell", ".NET Core", "React"]
+      },
+      {
+        "title": "مهندس برمجيات أول",
+        "company": "بنك البلاد",
+        "location": "الرياض",
+        "period": "أبريل 2025 – حتى الآن",
+        "description": [
+          "تصميم وتنفيذ نظام إشعارات مخصص لعناصر عمل Azure DevOps",
+          "تحسين تجربة المستخدم وتوسيع قدرات التقارير والتحليلات",
+          "حل الثغرات الأمنية وتحسين الامتثال واستقرار النظام",
+          "المساهمة في بناء مسار CI/CD لمنصة CRM",
+          "دعم المستوى الثالث لمشاكل الإنتاج"
+        ],
+        "technologies": ["CRM Dynamics", "Azure DevOps", "React", "JavaScript", ".NET Core", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ", "HangFire"]
+      }
+    ]
+  },
+  "skills": {
+    "tag": "ما أعرفه",
+    "title": "المهارات والخبرات",
+    "subtitle": "التقنيات والأدوات التي أستخدمها بشكل احترافي.",
+    "hardSkillsTitle": "المهارات التقنية",
+    "softSkillsTitle": "المهارات الشخصية",
+    "hardSkills": [
+      { "name": "DevOps وCI/CD", "level": 90, "icon": "fas fa-cogs" },
+      { "name": ".NET / C#", "level": 95, "icon": "fab fa-microsoft" },
+      { "name": "SQL وتحليل البيانات", "level": 90, "icon": "fas fa-database" },
+      { "name": "MS CRM Dynamics", "level": 92, "icon": "fas fa-users-cog" },
+      { "name": "JavaScript / TypeScript", "level": 85, "icon": "fab fa-js" },
+      { "name": "تطوير الويب", "level": 85, "icon": "fas fa-code" },
+      { "name": "الحوسبة السحابية", "level": 80, "icon": "fas fa-cloud" },
+      { "name": "Power BI", "level": 75, "icon": "fas fa-chart-bar" }
+    ],
+    "softSkills": ["التحسين المستمر", "الانضباط", "التواصل", "حل المشكلات", "قيادة الفريق", "التفكير التحليلي"]
+  },
+  "products": {
+    "tag": "مشاريع وأدوات",
+    "title": "منتجاتي",
+    "subtitle": "تطبيقات ويب وإضافات متصفح وأدوات Python بنيتها لحل مشاكل حقيقية.",
+    "ctaTitle": "لديك فكرة مشروع؟",
+    "ctaSubtitle": "أنا منفتح على بناء حلول مخصصة والتعاون في مشاريع مثيرة للاهتمام.",
+    "ctaBtn": "لنتحدث",
+    "addToChrome": "أضف إلى كروم",
+    "visitSite": "زيارة الموقع",
+    "viewOnGithub": "عرض على GitHub",
+    "featuresLabel": "المميزات",
+    "technologiesLabel": "التقنيات",
+    "items": [
+      {
+        "name": "التمرير التلقائي",
+        "description": "تمرير تلقائي لصفحات الويب بسرعة واتجاه قابلين للتخصيص. مثالي لقراءة المقالات الطويلة أو تصفح منصات التواصل الاجتماعي.",
+        "icon": "fas fa-scroll",
+        "link": "https://chromewebstore.google.com/detail/auto-scroll/pgogpmjdfnolmgihjemjakelopockkgo?authuser=0&hl=en",
+        "features": ["سرعة تمرير قابلة للضبط", "إيقاف/استئناف", "تمرير سلس", "يعمل على أي صفحة"],
+        "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"],
+        "category": "إضافة كروم",
+        "type": "chrome"
+      },
+      {
+        "name": "حاجب النوافذ المنبثقة",
+        "description": "حجب النوافذ المنبثقة غير المرغوب فيها والتبويبات التي تحاول المواقع فتحها دون إذنك. استمتع بتجربة تصفح أنظف.",
+        "icon": "fas fa-shield-alt",
+        "link": "https://chromewebstore.google.com/detail/popup-tabs-blocker/nedokjbfgbfjcfabhdmbnfkibjebmfco?authuser=0&hl=en",
+        "features": ["حجب تلقائي للنوافذ المنبثقة", "قائمة بيضاء للمواقع الموثوقة", "تنبيهات إشعار", "خفيف وسريع"],
+        "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"],
+        "category": "إضافة كروم",
+        "type": "chrome"
+      },
+      {
+        "name": "إشعارات عناصر العمل",
+        "description": "نظام إشعارات لعناصر عمل Azure DevOps. احصل على تنبيهات فورية حول تغييرات عناصر العمل والتعيينات وتحديثات الحالة.",
+        "icon": "fas fa-bell",
+        "link": "https://update-dev.vercel.app",
+        "features": ["إشعارات فورية", "تكامل مع Azure DevOps", "تنبيهات قابلة للتخصيص", "تعاون الفريق"],
+        "technologies": ["React", "TypeScript", "Azure DevOps API", "Vercel", "Tailwind CSS"],
+        "category": "تطبيق ويب",
+        "type": "web"
+      },
+      {
+        "name": "موقع العائلة",
+        "description": "منصة لإدارة شؤون العائلة وتنظيم الفعاليات ومشاركة الذكريات والتواصل مع الأحباء.",
+        "icon": "fas fa-users",
+        "link": "",
+        "features": ["تقويم فعاليات العائلة", "مشاركة الصور", "ملفات الأعضاء", "مركز تواصل"],
+        "technologies": ["React", "Next.js", "TypeScript", "Vercel", "Tailwind CSS"],
+        "category": "تطبيق ويب",
+        "type": "web"
+      },
+      {
+        "name": "موقع عائلة الموسى",
+        "description": "موقع احترافي يعرض الخدمات والمعلومات. مبني بتقنيات حديثة لأداء مثالي وتجربة مستخدم ممتازة.",
+        "icon": "fas fa-globe",
+        "link": "https://almoosa-family.vercel.app",
+        "features": ["تصميم عصري", "تخطيط متجاوب", "أداء سريع", "محسّن لمحركات البحث"],
+        "technologies": ["React", "Next.js", "TypeScript", "Vercel", "Tailwind CSS"],
+        "category": "تطبيق ويب",
+        "type": "web"
+      },
+      {
+        "name": "كاشف ومسح المنافذ",
+        "description": "أداة أمن شبكي تكتشف نشاط مسح المنافذ عبر مراقبة أكثر من 15 منفذاً متتالياً خلال 5 ثوانٍ من مصدر واحد.",
+        "icon": "fas fa-network-wired",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/Detect%26PortScanner",
+        "features": ["اكتشاف مسح المنافذ", "مراقبة فورية", "عتبات قابلة للضبط", "تسجيل الأمان"],
+        "technologies": ["Python", "Networking", "Socket Programming"],
+        "category": "أداة Python",
+        "type": "python"
+      },
+      {
+        "name": "حاسبة المعدل التراكمي",
+        "description": "أداة أكاديمية تعالج سجلات المقررات بالأوزان والدرجات الحرفية لحساب المعدل التراكمي بدقة.",
+        "icon": "fas fa-graduation-cap",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/GPA_calculator",
+        "features": ["حساب المعدل الموزون", "مقاييس درجات متعددة", "التعامل مع ساعات المقررات", "إدخال من ملف"],
+        "technologies": ["Python", "File Processing", "Mathematics"],
+        "category": "أداة Python",
+        "type": "python"
+      },
+      {
+        "name": "إخفاء هوية البيانات",
+        "description": "تطبيق خوارزمية K-Anonymization لإخفاء هوية مجموعات البيانات وحماية المعلومات الحساسة.",
+        "icon": "fas fa-user-secret",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/K-Anonymization",
+        "features": ["إخفاء هوية البيانات", "حماية الخصوصية", "قيم K قابلة للضبط", "تعميم البيانات"],
+        "technologies": ["Python", "Data Privacy", "Algorithms"],
+        "category": "أداة Python",
+        "type": "python"
+      },
+      {
+        "name": "إخفاء البيانات في الصور",
+        "description": "تطبيق إخفاء المعلومات في الصور مع وضعَي إخفاء واسترجاع البيانات السرية داخل الصور.",
+        "icon": "fas fa-image",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/PicSteg",
+        "features": ["إخفاء البيانات في الصور", "استخراج البيانات المخفية", "دعم صيغ متعددة", "ترميز آمن"],
+        "technologies": ["Python", "Steganography", "Image Processing", "PIL"],
+        "category": "أداة Python",
+        "type": "python"
+      },
+      {
+        "name": "تأخير الترجمة المجمّع",
+        "description": "معالج ملفات ترجمة SRT لضبط التوقيت بإضافة أو طرح تأخيرات لمزامنة الترجمة مع الفيديو.",
+        "icon": "fas fa-closed-captioning",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/bulk-delay%20Subtitle",
+        "features": ["ضبط توقيت الترجمة", "معالجة مجمّعة", "دعم تنسيق SRT", "تأخيرات موجبة وسالبة"],
+        "technologies": ["Python", "File Processing", "Regular Expressions"],
+        "category": "أداة Python",
+        "type": "python"
+      }
+    ]
+  },
+  "contact": {
+    "tag": "تواصل معي",
+    "title": "اتصل بي",
+    "subtitle": "هل لديك مشروع في ذهنك أو تريد التعاون؟ يسعدني سماع منك.",
+    "nameLabel": "الاسم الكامل",
+    "namePlaceholder": "اسمك الكامل",
+    "emailLabel": "البريد الإلكتروني",
+    "emailPlaceholder": "بريدك@الإلكتروني.com",
+    "subjectLabel": "الموضوع",
+    "subjectPlaceholder": "ما موضوع رسالتك؟",
+    "messageLabel": "الرسالة",
+    "messagePlaceholder": "أخبرني عن مشروعك أو استفسارك...",
+    "sendBtn": "إرسال الرسالة",
+    "sendingBtn": "جارٍ الإرسال...",
+    "successMsg": "تم إرسال الرسالة! سأرد عليك قريباً.",
+    "methods": [
+      { "icon": "fas fa-envelope", "title": "البريد الإلكتروني", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335" },
+      { "icon": "fab fa-linkedin-in", "title": "لينكد إن", "value": "عبدالرحمن الهويس", "link": "https://www.linkedin.com/in/abdulrahman-alhuwais/", "color": "#0077b5" },
+      { "icon": "fab fa-github", "title": "GitHub", "value": "drperstry", "link": "https://github.com/drperstry", "color": "#6e40c9" },
+      { "icon": "fab fa-whatsapp", "title": "واتساب", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366" },
+      { "icon": "fas fa-phone", "title": "الهاتف", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1" },
+      { "icon": "fas fa-map-marker-alt", "title": "الموقع", "value": "الرياض، المملكة العربية السعودية", "link": "https://maps.google.com/?q=Riyadh,Saudi+Arabia", "color": "#f59e0b" }
+    ]
+  },
+  "footer": {
+    "name": "عبدالرحمن هويس",
+    "role": "مهندس برمجيات أول",
+    "rights": "جميع الحقوق محفوظة.",
+    "builtWith": "مبني بـ Angular"
+  },
+  "theme": {
+    "dark": "داكن",
+    "light": "فاتح"
+  }
+}

@@ -1,27 +1,23 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-content">
-      <!-- Brand -->
       <div class="footer-brand">
         <a routerLink="/" class="footer-logo">
           <span class="logo-text">A</span>
           <span class="logo-accent">.</span>
         </a>
-        <p class="footer-tagline">Building robust systems & driving technical excellence</p>
+        <p class="footer-tagline">{{ 'footer.role' | translate }}</p>
       </div>
 
-      <!-- Quick Links -->
       <div class="footer-links">
-        <h4>Quick Links</h4>
-        <a routerLink="/">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a routerLink="/contact">Contact</a>
+        <h4>{{ 'nav.home' | translate }}</h4>
+        <a routerLink="/">{{ 'nav.home' | translate }}</a>
+        <a routerLink="/products">{{ 'nav.products' | translate }}</a>
+        <a routerLink="/contact">{{ 'nav.contact' | translate }}</a>
       </div>
 
-      <!-- Contact Info -->
       <div class="footer-contact">
-        <h4>Get In Touch</h4>
+        <h4>{{ 'contact.tag' | translate }}</h4>
         <a href="mailto:abdulrahmanhuwais@gmail.com">
           <i class="fas fa-envelope"></i>
           abdulrahmanhuwais&#64;gmail.com
@@ -36,16 +32,12 @@
         </span>
       </div>
 
-      <!-- Social Links -->
       <div class="footer-social">
         <h4>Connect</h4>
         <div class="social-icons">
           <a *ngFor="let social of socialLinks"
-             [href]="social.url"
-             target="_blank"
-             rel="noopener"
-             [attr.aria-label]="social.label"
-             class="social-icon">
+             [href]="social.url" target="_blank" rel="noopener"
+             [attr.aria-label]="social.label" class="social-icon">
             <i [class]="social.icon"></i>
           </a>
         </div>
@@ -53,10 +45,10 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Abdulrahman Alhuwais. All rights reserved.</p>
+      <p>&copy; {{ currentYear }} {{ 'footer.name' | translate }}. {{ 'footer.rights' | translate }}</p>
       <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="download-cv">
         <i class="fas fa-download"></i>
-        Download CV
+        {{ 'nav.downloadResume' | translate }}
       </a>
     </div>
   </div>
