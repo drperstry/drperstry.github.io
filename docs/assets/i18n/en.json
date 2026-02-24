@@ -1,0 +1,263 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "products": "Products",
+    "contact": "Contact",
+    "downloadResume": "Download Resume"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Abdulrahman Huwais",
+    "roles": ["Senior Software Engineer", "DevOps Engineer", "CRM Specialist", "Problem Solver"],
+    "description": "Passionate software engineer with expertise in enterprise solutions, CRM platforms, and DevOps practices.",
+    "cta": "View My Work",
+    "contactBtn": "Get In Touch"
+  },
+  "about": {
+    "tag": "Who I Am",
+    "title": "About Me",
+    "subtitle": "A passionate software engineer dedicated to building scalable and impactful solutions.",
+    "bio1": "I'm a Senior Software Engineer with over 3 years of professional experience in enterprise software development, CRM platforms, and DevOps engineering. I specialize in building robust, scalable solutions that make a real impact.",
+    "bio2": "My journey spans across top Saudi financial institutions including Saudi Aramco, Al Rajhi Bank, and Albilad Bank, where I've led development of critical systems and improved operational efficiency.",
+    "education": {
+      "label": "Education",
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "Imam Abdulrahman Bin Faisal University",
+      "period": "2018 – 2022",
+      "gpa": "GPA: 4.53 / 5.0"
+    },
+    "stats": [
+      { "value": "3+", "label": "Years Experience" },
+      { "value": "4", "label": "Companies" },
+      { "value": "10+", "label": "Projects Built" },
+      { "value": "2", "label": "Chrome Extensions" }
+    ]
+  },
+  "experience": {
+    "tag": "Career Journey",
+    "title": "Work Experience",
+    "subtitle": "My professional journey across Saudi Arabia's top organizations.",
+    "items": [
+      {
+        "title": "Software Engineer Intern",
+        "company": "Saudi Aramco",
+        "location": "Dhahran",
+        "period": "May 2021 – Aug 2021",
+        "description": [
+          "Implementation of a desktop app and a website based on multiple department requirements"
+        ],
+        "technologies": [".NET", "JavaScript", "Access DB", "SQL"]
+      },
+      {
+        "title": "Software Engineer",
+        "company": "Ejada & AL Rajhi Bank",
+        "location": "Riyadh",
+        "period": "Oct 2022 – Apr 2025",
+        "description": [
+          "Implemented WCF services, custom activities, plugins, and customizations",
+          "Designed and implemented a custom CI/CD pipeline for CRM Solutions",
+          "Built operational and monitoring tools to track system health and perform administrative tasks",
+          "Improved delivery quality by reviewing, identifying risks early, and recommending best practices"
+        ],
+        "technologies": ["CRM Dynamics", "Jira", "Angular", "JavaScript", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ"]
+      },
+      {
+        "title": "DevOps Engineer",
+        "company": "Minthar",
+        "location": "Riyadh",
+        "period": "Jul 2024 – Oct 2024",
+        "description": [
+          "Boilerplate for Bitbucket CI/CD in IIS",
+          "ETL Job from scraping data using site APIs to transforming until loading into new Database",
+          "Maintaining Cloud providers and SQL Cloud migration as well as other assets",
+          "Automated Administrative tasks with SQL maintenance jobs and PowerShell scripts"
+        ],
+        "technologies": ["AWS", "Google Cloud", "Jira", "SQL Server", "PowerShell", ".NET Core", "React"]
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Albilad Bank",
+        "location": "Riyadh",
+        "period": "Apr 2025 – Present",
+        "description": [
+          "Designed and implemented a custom notification system for Azure DevOps Work Items",
+          "Improving user experience and expanding reporting and analytics capabilities",
+          "Resolved security vulnerabilities, improving compliance and system stability",
+          "Contributed in building CI/CD pipeline for CRM Platform",
+          "Third level support for production issues"
+        ],
+        "technologies": ["CRM Dynamics", "Azure DevOps", "React", "JavaScript", ".NET Core", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ", "HangFire"]
+      }
+    ]
+  },
+  "skills": {
+    "tag": "What I Know",
+    "title": "Skills & Expertise",
+    "subtitle": "Technologies and tools I work with professionally.",
+    "hardSkillsTitle": "Technical Skills",
+    "softSkillsTitle": "Soft Skills",
+    "hardSkills": [
+      { "name": "DevOps & CI/CD", "level": 90, "icon": "fas fa-cogs" },
+      { "name": ".NET / C#", "level": 95, "icon": "fab fa-microsoft" },
+      { "name": "SQL & Data Analysis", "level": 90, "icon": "fas fa-database" },
+      { "name": "MS CRM Dynamics", "level": 92, "icon": "fas fa-users-cog" },
+      { "name": "JavaScript / TypeScript", "level": 85, "icon": "fab fa-js" },
+      { "name": "Web Development", "level": 85, "icon": "fas fa-code" },
+      { "name": "Cloud (AWS/Azure/GCP)", "level": 80, "icon": "fas fa-cloud" },
+      { "name": "Power BI", "level": 75, "icon": "fas fa-chart-bar" }
+    ],
+    "softSkills": ["Continuous Improvement", "Discipline", "Communication", "Problem Solving", "Team Leadership", "Analytical Thinking"]
+  },
+  "products": {
+    "tag": "Projects & Tools",
+    "title": "My Products",
+    "subtitle": "Web applications, browser extensions, and Python tools I've built to solve real-world problems.",
+    "ctaTitle": "Have a product idea?",
+    "ctaSubtitle": "I'm open to building custom solutions and collaborating on interesting projects.",
+    "ctaBtn": "Let's Discuss",
+    "addToChrome": "Add to Chrome",
+    "visitSite": "Visit Site",
+    "viewOnGithub": "View on GitHub",
+    "featuresLabel": "Features",
+    "technologiesLabel": "Technologies",
+    "items": [
+      {
+        "name": "Auto Scroll",
+        "description": "Automatically scroll through web pages with customizable speed and direction. Perfect for reading long articles, browsing social media feeds, or hands-free web browsing.",
+        "icon": "fas fa-scroll",
+        "link": "https://chromewebstore.google.com/detail/auto-scroll/pgogpmjdfnolmgihjemjakelopockkgo?authuser=0&hl=en",
+        "features": ["Adjustable scroll speed", "Pause/Resume functionality", "Smooth scrolling animation", "Works on any webpage"],
+        "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"],
+        "category": "Chrome Extension",
+        "type": "chrome"
+      },
+      {
+        "name": "Popup Tabs Blocker",
+        "description": "Block unwanted popup windows and tabs that websites try to open without your permission. Enjoy a cleaner, less intrusive browsing experience.",
+        "icon": "fas fa-shield-alt",
+        "link": "https://chromewebstore.google.com/detail/popup-tabs-blocker/nedokjbfgbfjcfabhdmbnfkibjebmfco?authuser=0&hl=en",
+        "features": ["Block popup tabs automatically", "Whitelist trusted sites", "Notification alerts", "Lightweight & fast"],
+        "technologies": ["JavaScript", "Chrome APIs", "HTML", "CSS"],
+        "category": "Chrome Extension",
+        "type": "chrome"
+      },
+      {
+        "name": "Work Item Notification",
+        "description": "A notification system for Azure DevOps Work Items. Get real-time alerts and updates on work item changes, assignments, and status updates.",
+        "icon": "fas fa-bell",
+        "link": "https://update-dev.vercel.app",
+        "features": ["Real-time notifications", "Azure DevOps integration", "Customizable alerts", "Team collaboration"],
+        "technologies": ["React", "TypeScript", "Azure DevOps API", "Vercel", "Tailwind CSS"],
+        "category": "Web App",
+        "type": "web"
+      },
+      {
+        "name": "Family Unit",
+        "description": "A family management platform to organize events, share memories, and stay connected with loved ones. Keep your family organized and engaged.",
+        "icon": "fas fa-users",
+        "link": "",
+        "features": ["Family event calendar", "Photo sharing", "Member profiles", "Communication hub"],
+        "technologies": ["React", "Next.js", "TypeScript", "Vercel", "Tailwind CSS"],
+        "category": "Web App",
+        "type": "web"
+      },
+      {
+        "name": "Almoosa Family Site",
+        "description": "A professional website showcasing services and information. Built with modern technologies for optimal performance and user experience.",
+        "icon": "fas fa-globe",
+        "link": "https://almoosa-family.vercel.app",
+        "features": ["Modern design", "Responsive layout", "Fast performance", "SEO optimized"],
+        "technologies": ["React", "Next.js", "TypeScript", "Vercel", "Tailwind CSS"],
+        "category": "Web App",
+        "type": "web"
+      },
+      {
+        "name": "Detect & Port Scanner",
+        "description": "Network security tool that identifies port scanning activity by monitoring for 15 or more consecutive ports within a 5 second window from a single source.",
+        "icon": "fas fa-network-wired",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/Detect%26PortScanner",
+        "features": ["Port scan detection", "Real-time monitoring", "Configurable thresholds", "Security logging"],
+        "technologies": ["Python", "Networking", "Socket Programming"],
+        "category": "Python Tool",
+        "type": "python"
+      },
+      {
+        "name": "GPA Calculator",
+        "description": "Academic tool that processes course records with weights and letter grades to compute GPA accurately.",
+        "icon": "fas fa-graduation-cap",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/GPA_calculator",
+        "features": ["Weighted GPA calculation", "Multiple grading scales", "Course credit handling", "File-based input"],
+        "technologies": ["Python", "File Processing", "Mathematics"],
+        "category": "Python Tool",
+        "type": "python"
+      },
+      {
+        "name": "K-Anonymization",
+        "description": "Data privacy implementation applying the K-Anonymization algorithm for anonymizing datasets and protecting sensitive information.",
+        "icon": "fas fa-user-secret",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/K-Anonymization",
+        "features": ["Dataset anonymization", "Privacy protection", "Configurable K values", "Data generalization"],
+        "technologies": ["Python", "Data Privacy", "Algorithms"],
+        "category": "Python Tool",
+        "type": "python"
+      },
+      {
+        "name": "PicSteg",
+        "description": "Image steganography application with Hide/Unhide modes for embedding and extracting secret data within images.",
+        "icon": "fas fa-image",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/PicSteg",
+        "features": ["Hide data in images", "Extract hidden data", "Multiple image formats", "Secure encoding"],
+        "technologies": ["Python", "Steganography", "Image Processing", "PIL"],
+        "category": "Python Tool",
+        "type": "python"
+      },
+      {
+        "name": "Bulk Delay Subtitle",
+        "description": "SRT subtitle file processor for adjusting timing by adding or subtracting delays to sync subtitles with video.",
+        "icon": "fas fa-closed-captioning",
+        "link": "https://github.com/drperstry/SimpleTools/tree/master/bulk-delay%20Subtitle",
+        "features": ["Subtitle time adjustment", "Bulk processing", "SRT format support", "Positive/negative delays"],
+        "technologies": ["Python", "File Processing", "Regular Expressions"],
+        "category": "Python Tool",
+        "type": "python"
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Get In Touch",
+    "title": "Contact Me",
+    "subtitle": "Have a project in mind or want to collaborate? I'd love to hear from you.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What is this about?",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project or inquiry...",
+    "sendBtn": "Send Message",
+    "sendingBtn": "Sending...",
+    "successMsg": "Message sent! I'll get back to you soon.",
+    "methods": [
+      { "icon": "fas fa-envelope", "title": "Email", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335" },
+      { "icon": "fab fa-linkedin-in", "title": "LinkedIn", "value": "Abdulrahman Alhuwais", "link": "https://www.linkedin.com/in/abdulrahman-alhuwais/", "color": "#0077b5" },
+      { "icon": "fab fa-github", "title": "GitHub", "value": "drperstry", "link": "https://github.com/drperstry", "color": "#6e40c9" },
+      { "icon": "fab fa-whatsapp", "title": "WhatsApp", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366" },
+      { "icon": "fas fa-phone", "title": "Phone", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1" },
+      { "icon": "fas fa-map-marker-alt", "title": "Location", "value": "Riyadh, Saudi Arabia", "link": "https://maps.google.com/?q=Riyadh,Saudi+Arabia", "color": "#f59e0b" }
+    ]
+  },
+  "footer": {
+    "name": "Abdulrahman Huwais",
+    "role": "Senior Software Engineer",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Angular"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light"
+  }
+}
