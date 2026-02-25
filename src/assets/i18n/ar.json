@@ -10,7 +10,7 @@
   },
   "hero": {
     "greeting": "مرحباً، أنا",
-    "name": "عبدالرحمن هويس",
+    "name": "عبدالرحمن الحويس",
     "roles": ["مهندس برمجيات أول", "مهندس DevOps", "متخصص CRM", "حلّال مشكلات"],
     "description": "مهندس برمجيات شغوف بخبرة في الحلول المؤسسية ومنصات CRM وممارسات DevOps.",
     "cta": "عرض أعمالي",
@@ -26,7 +26,7 @@
       "label": "التعليم",
       "degree": "بكالوريوس علوم الحاسب",
       "university": "جامعة الملك فهد للبترول والمعادن",
-      "period": "2018 – 2022",
+      "period": "2016 – 2022",
       "gpa": "المعدل: 3.09 / 4.0"
     },
     "stats": [
@@ -243,7 +243,7 @@
     "successMsg": "تم إرسال الرسالة! سأرد عليك قريباً.",
     "methods": [
       { "icon": "fas fa-envelope", "title": "البريد الإلكتروني", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335" },
-      { "icon": "fab fa-linkedin-in", "title": "لينكد إن", "value": "عبدالرحمن الهويس", "link": "https://www.linkedin.com/in/abdulrahman-alhuwais/", "color": "#0077b5" },
+      { "icon": "fab fa-linkedin-in", "title": "لينكد إن", "value": "عبدالرحمن الحويس", "link": "https://www.linkedin.com/in/abdulrahman-alhuwais/", "color": "#0077b5" },
       { "icon": "fab fa-github", "title": "GitHub", "value": "drperstry", "link": "https://github.com/drperstry", "color": "#6e40c9" },
       { "icon": "fab fa-whatsapp", "title": "واتساب", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366" },
       { "icon": "fas fa-phone", "title": "الهاتف", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1" },
@@ -251,7 +251,7 @@
     ]
   },
   "footer": {
-    "name": "عبدالرحمن هويس",
+    "name": "عبدالرحمن الحويس",
     "role": "مهندس برمجيات أول",
     "rights": "جميع الحقوق محفوظة.",
     "builtWith": "مبني بـ Angular"
