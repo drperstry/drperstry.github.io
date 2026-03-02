@@ -32,17 +32,17 @@
   align-items: center;
 
   .logo-text {
-    color: #f8fafc;
+    color: var(--text-primary);
     transition: color 0.3s ease;
   }
 
   .logo-accent {
-    color: #6366f1;
+    color: var(--primary);
     font-size: 2.5rem;
   }
 
   &:hover .logo-text {
-    color: #6366f1;
+    color: var(--primary);
   }
 }
 
@@ -52,7 +52,7 @@
   gap: 2rem;
 
   a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-weight: 500;
     font-size: 0.95rem;
     position: relative;
@@ -66,13 +66,13 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      background: var(--gradient);
       transition: width 0.3s ease;
     }
 
     &:hover,
     &.active {
-      color: #f8fafc;
+      color: var(--text-primary);
 
       &::after {
         width: 100%;
@@ -116,7 +116,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.65rem 1.2rem;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: var(--gradient);
   color: white;
   border-radius: 8px;
   font-weight: 600;
@@ -125,7 +125,7 @@
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 10px 30px var(--primary-glow);
   }
 
   i { font-size: 0.8rem; }
@@ -148,7 +148,7 @@
     display: block;
     width: 24px;
     height: 2px;
-    background: #f8fafc;
+    background: var(--text-primary);
     transition: all 0.3s ease;
   }
 
@@ -188,7 +188,7 @@
   }
 
   a {
-    color: #94a3b8;
+    color: var(--text-secondary);
     padding: 1rem 1.5rem;
     font-weight: 500;
     border-radius: 8px;
@@ -196,8 +196,8 @@
 
     &:hover,
     &.active {
-      color: #f8fafc;
-      background: rgba(99, 102, 241, 0.1);
+      color: var(--text-primary);
+      background: var(--primary-alpha);
     }
   }
 
@@ -219,13 +219,13 @@
     gap: 0.5rem;
     margin-top: 0.5rem;
     padding: 1rem;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: var(--gradient);
     color: white;
     border-radius: 8px;
     font-weight: 600;
 
     &:hover {
-      background: rgba(99, 102, 241, 0.1);
+      background: var(--primary-alpha);
       color: white;
     }
   }
