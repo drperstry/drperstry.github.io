@@ -69,19 +69,43 @@
 
 // Light theme specific overrides
 [data-theme="light"] {
+  // Navbar
   .navbar.scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
-  .gradient-orb { opacity: var(--orb-opacity) !important; }
+
+  // Hero background orbs - much lighter in light mode
+  .gradient-orb {
+    opacity: 0.08 !important;
+    filter: blur(100px);
+  }
+  .hero { background: var(--bg); }
+
+  // Cards with solid backgrounds and subtle shadows
   .product-card, .timeline-card, .contact-card, .stat-card, .about-card, .skills-category {
     background: var(--bg-card-solid);
     border: 1px solid var(--border);
-    box-shadow: 0 4px 15px var(--shadow);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   }
+
+  // Text visibility improvements
   .hero-content, .section-title, .products-title, .contact-title {
     color: var(--text-primary);
   }
+  .hero-name { color: var(--text-primary); }
+  .hero-description { color: var(--text-secondary); }
+
+  // Gradient text - more vibrant for light mode
+  .gradient-text {
+    background: linear-gradient(135deg, #4f46e5 0%, #0891b2 50%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  // Tags and badges
   .section-tag, .product-category {
     background: var(--tag-bg);
     border-color: var(--tag-border);
+    color: var(--primary);
   }
   .skill-bar { background: var(--skill-bar-bg); }
   .tech-tag {
@@ -89,10 +113,52 @@
     border-color: var(--tag-border);
     color: var(--primary);
   }
-  .mobile-nav { background: var(--bg-nav); border-top: 1px solid var(--border); }
-  .footer { background: var(--bg-secondary); border-top: 1px solid var(--border); }
-  input, textarea { background: var(--bg-input) !important; border-color: var(--border) !important; color: var(--text-primary) !important; }
+
+  // Mobile nav
+  .mobile-nav {
+    background: var(--bg-nav);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  // Footer
+  .footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+  }
+
+  // Form inputs
+  input, textarea {
+    background: var(--bg-input) !important;
+    border-color: var(--border) !important;
+    color: var(--text-primary) !important;
+    &::placeholder { color: var(--text-muted) !important; }
+  }
+
+  // Hide cursor glow in light mode
   .cursor-glow { display: none; }
+
+  // Buttons - ensure outline buttons are visible
+  .btn-outline {
+    border-color: var(--border);
+    color: var(--text-primary);
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+  }
+
+  // Social links
+  .social-link {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+    color: var(--text-secondary);
+  }
+
+  // Scroll indicator
+  .scroll-indicator {
+    color: var(--text-muted);
+  }
 }
 
 // Base Styles
@@ -110,6 +176,28 @@ body {
   transition: background-color 0.4s ease, color 0.3s ease;
 }
 
+// Smooth transitions for RTL/LTR and theme changes
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, box-shadow, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+// Exclude elements that need instant transitions (like animations)
+.gradient-orb, .cursor-glow, .cursor-dot, .skill-bar-fill {
+  transition: none;
+}
+
+// Layout transitions for RTL changes
+.nav-container, .nav-links, .nav-controls, .logo,
+.hero-cta, .hero-socials, .about-content, .about-card,
+.timeline-item, .timeline-card, .timeline-header, .timeline-meta,
+.skill-header, .skill-info, .soft-skill-card, .category-title,
+.product-header, .product-cta, .contact-card, .footer-content,
+.footer-bottom, .btn, .section-tag, .cta-buttons, .social-icons {
+  transition: all 0.4s ease;
+}
+
 // RTL support for Arabic
 [dir="rtl"] {
   font-family: 'Noto Sans Arabic', 'Inter', system-ui, sans-serif;
@@ -124,30 +212,93 @@ body {
   // Hero section
   .hero-content { text-align: right; }
   .hero-cta { flex-direction: row-reverse; justify-content: flex-start; }
-  .hero-socials { justify-content: flex-start; }
+  .hero-socials { justify-content: flex-start; flex-direction: row-reverse; }
 
   // About section
-  .about-content { flex-direction: row-reverse; }
+  .about-content { direction: rtl; }
   .about-card { flex-direction: row-reverse; text-align: right; }
   .about-icon { margin-left: 1.5rem; margin-right: 0; }
   .stat-card { text-align: center; }
 
-  // Timeline
-  .timeline-card {
-    border-left: none;
-    border-right: 3px solid var(--primary);
-    padding-left: 0;
-    padding-right: 1.5rem;
+  // Timeline - Complete RTL fix
+  .timeline {
+    &::before {
+      left: auto;
+      right: 20px;
+      @media (min-width: 768px) {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
+    }
   }
-  .timeline-header { flex-direction: row-reverse; }
-  .timeline-meta { flex-direction: row-reverse; }
-  .timeline-meta span { flex-direction: row-reverse; }
+
+  .timeline-item {
+    padding-left: 0;
+    padding-right: 60px;
+
+    @media (min-width: 768px) {
+      padding-right: 0;
+      padding-left: 50px;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:nth-child(odd) {
+        margin-left: 50%;
+        padding-left: 50px;
+        padding-right: 0;
+      }
+
+      &:nth-child(even) {
+        margin-left: 0;
+        padding-right: 50px;
+        padding-left: 0;
+      }
+    }
+
+    &::before {
+      left: auto;
+      right: 12px;
+
+      @media (min-width: 768px) {
+        right: auto;
+        left: -9px;
+      }
+    }
+
+    &:nth-child(odd)::before {
+      @media (min-width: 768px) {
+        left: -9px;
+        right: auto;
+      }
+    }
+
+    &:nth-child(even)::before {
+      @media (min-width: 768px) {
+        right: -9px;
+        left: auto;
+      }
+    }
+  }
+
+  .timeline-card {
+    text-align: right;
+  }
+  .timeline-header { flex-direction: row-reverse; flex-wrap: wrap; }
+  .timeline-title-group { text-align: right; }
+  .timeline-meta { flex-direction: row-reverse; flex-wrap: wrap; gap: 1rem; }
+  .timeline-meta span { flex-direction: row-reverse; display: inline-flex; align-items: center; }
   .timeline-meta i { margin-left: 0.5rem; margin-right: 0; }
-  .timeline-description { padding-right: 1.5rem; padding-left: 0; }
-  .timeline-description li { flex-direction: row-reverse; }
-  .timeline-technologies { justify-content: flex-start; }
+  .timeline-description { padding-right: 0; padding-left: 0; }
+  .timeline-description li {
+    flex-direction: row-reverse;
+    text-align: right;
+    &::before { margin-left: 0.75rem; margin-right: 0; }
+  }
+  .timeline-technologies { justify-content: flex-start; flex-direction: row-reverse; }
 
   // Skills
+  .skills-grid { direction: rtl; }
   .skill-header { flex-direction: row-reverse; }
   .skill-info { flex-direction: row-reverse; }
   .skill-info i { margin-left: 0.75rem; margin-right: 0; }
@@ -159,7 +310,7 @@ body {
 
   // Products
   .product-header { flex-direction: row-reverse; }
-  .product-features ul li { flex-direction: row-reverse; }
+  .product-features ul li { flex-direction: row-reverse; text-align: right; }
   .product-features li i { margin-left: 0.5rem; margin-right: 0; }
   .product-cta { flex-direction: row-reverse; }
   .product-cta i { margin-left: 0.75rem; margin-right: 0; }
@@ -177,12 +328,22 @@ body {
   .success-message i { margin-left: 0.5rem; margin-right: 0; }
 
   // Footer
-  .footer-content { flex-direction: row-reverse; }
+  .footer-content { direction: rtl; }
+  .footer-links h4::after, .footer-contact h4::after, .footer-social h4::after {
+    left: auto;
+    right: 0;
+    @media (max-width: 600px) {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  }
   .footer-contact a, .footer-contact span { flex-direction: row-reverse; }
   .footer-contact i { margin-left: 0.75rem; margin-right: 0; }
   .footer-bottom { flex-direction: row-reverse; }
   .download-cv { flex-direction: row-reverse; }
   .download-cv i { margin-left: 0.5rem; margin-right: 0; }
+  .social-icons { flex-direction: row-reverse; }
 
   // Buttons
   .btn { flex-direction: row-reverse; }
@@ -194,11 +355,19 @@ body {
   .section-tag { flex-direction: row-reverse; }
   .section-tag i { margin-left: 0.5rem; margin-right: 0; }
 
+  // Section titles - center alignment
+  .section-title, .section-subtitle { text-align: center; }
+
+  // CTA section
+  .cta-content { text-align: center; }
+  .cta-buttons { flex-direction: row-reverse; }
+
   // Mobile
   .mobile-controls { flex-direction: row-reverse; }
   .theme-toggle, .lang-toggle { flex-direction: row-reverse; }
   .btn-download-mobile { flex-direction: row-reverse; }
   .btn-download-mobile i { margin-left: 0.5rem; margin-right: 0; }
+  .mobile-nav-links { text-align: right; }
 }
 
 // App root container
