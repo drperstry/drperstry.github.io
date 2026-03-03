@@ -69,8 +69,19 @@
 
 // Light theme specific overrides
 [data-theme="light"] {
-  // Navbar
-  .navbar.scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
+  // Navbar - brighter and cleaner
+  .navbar {
+    &.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  // Logo "A" - make it clearly visible with primary color
+  .logo .logo-text {
+    color: var(--primary) !important;
+    font-weight: 800;
+  }
 
   // Hero background orbs - much lighter in light mode
   .gradient-orb {
@@ -116,7 +127,7 @@
 
   // Mobile nav
   .mobile-nav {
-    background: var(--bg-nav);
+    background: rgba(255, 255, 255, 0.98);
     border-top: 1px solid var(--border);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
@@ -220,11 +231,9 @@ body {
   .about-icon { margin-left: 1.5rem; margin-right: 0; }
   .stat-card { text-align: center; }
 
-  // Timeline - Complete RTL fix
+  // Timeline - Keep same layout as English, just RTL text
   .timeline {
     &::before {
-      left: auto;
-      right: 20px;
       @media (min-width: 768px) {
         left: 50%;
         right: auto;
@@ -234,49 +243,32 @@ body {
   }
 
   .timeline-item {
-    padding-left: 0;
-    padding-right: 60px;
-
     @media (min-width: 768px) {
-      padding-right: 0;
-      padding-left: 50px;
-      margin-left: 0;
-      margin-right: 0;
-
+      // Keep the same alternating pattern as LTR
       &:nth-child(odd) {
-        margin-left: 50%;
-        padding-left: 50px;
-        padding-right: 0;
-      }
-
-      &:nth-child(even) {
         margin-left: 0;
         padding-right: 50px;
         padding-left: 0;
       }
-    }
 
-    &::before {
-      left: auto;
-      right: 12px;
-
-      @media (min-width: 768px) {
-        right: auto;
-        left: -9px;
+      &:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 50px;
+        padding-right: 0;
       }
     }
 
-    &:nth-child(odd)::before {
+    &::before {
       @media (min-width: 768px) {
-        left: -9px;
-        right: auto;
+        right: -9px;
+        left: auto;
       }
     }
 
     &:nth-child(even)::before {
       @media (min-width: 768px) {
-        right: -9px;
-        left: auto;
+        left: -9px;
+        right: auto;
       }
     }
   }
