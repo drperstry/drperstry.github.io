@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
   private typingInterval: any;
   private eraseInterval: any;
+  private typingTimeout: any;
+  private eraseTimeout: any;
 
   constructor(private translate: TranslateService) {}
 
@@ -34,11 +36,24 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
-    clearInterval(this.typingInterval);
-    clearInterval(this.eraseInterval);
+    this.clearAllTimers();
+  }
+
+  private clearAllTimers(): void {
+    if (this.typingInterval) clearInterval(this.typingInterval);
+    if (this.eraseInterval) clearInterval(this.eraseInterval);
+    if (this.typingTimeout) clearTimeout(this.typingTimeout);
+    if (this.eraseTimeout) clearTimeout(this.eraseTimeout);
+    this.typingInterval = null;
+    this.eraseInterval = null;
+    this.typingTimeout = null;
+    this.eraseTimeout = null;
   }
 
   private loadContent(): void {
+    // Clear all timers first to prevent multiple animations
+    this.clearAllTimers();
+
     this.translate.get([
       'hero.roles',
       'experience.items',
@@ -51,15 +66,11 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.softSkills = data['skills.softSkills'] || [];
       this.stats = data['about.stats'] || [];
 
-      const newRoles = data['hero.roles'] || [];
-      if (JSON.stringify(newRoles) !== JSON.stringify(this.roles)) {
-        this.roles = newRoles;
-        this.currentRole = 0;
-        this.displayedRole = '';
-        clearInterval(this.typingInterval);
-        clearInterval(this.eraseInterval);
-        this.typeRole();
-      }
+      // Always reset and restart typing animation on language change
+      this.roles = data['hero.roles'] || [];
+      this.currentRole = 0;
+      this.displayedRole = '';
+      this.typeRole();
     });
   }
 
@@ -76,8 +87,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         charIndex++;
       } else {
         clearInterval(this.typingInterval);
+        this.typingInterval = null;
         this.isTyping = false;
-        setTimeout(() => this.eraseRole(), 2000);
+        this.eraseTimeout = setTimeout(() => this.eraseRole(), 2000);
       }
     }, 100);
   }
@@ -88,8 +100,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.displayedRole = this.displayedRole.slice(0, -1);
       } else {
         clearInterval(this.eraseInterval);
+        this.eraseInterval = null;
         this.currentRole = (this.currentRole + 1) % this.roles.length;
-        setTimeout(() => this.typeRole(), 500);
+        this.typingTimeout = setTimeout(() => this.typeRole(), 500);
       }
     }, 50);
   }
