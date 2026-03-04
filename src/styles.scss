@@ -132,10 +132,21 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
-  // Footer
+  // CTA Section - brighter in light mode
+  .cta-section {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05)) !important;
+  }
+
+  // Footer - brighter in light mode
   .footer {
-    background: var(--bg-secondary);
+    background: #f8fafc !important;
     border-top: 1px solid var(--border);
+  }
+  .footer-tagline, .footer-links a, .footer-contact a, .footer-contact span, .footer-bottom p {
+    color: var(--text-secondary);
+  }
+  .footer h4 {
+    color: var(--text-primary);
   }
 
   // Form inputs
@@ -231,48 +242,7 @@ body {
   .about-icon { margin-left: 1.5rem; margin-right: 0; }
   .stat-card { text-align: center; }
 
-  // Timeline - Keep same layout as English, just RTL text
-  .timeline {
-    &::before {
-      @media (min-width: 768px) {
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-      }
-    }
-  }
-
-  .timeline-item {
-    @media (min-width: 768px) {
-      // Keep the same alternating pattern as LTR
-      &:nth-child(odd) {
-        margin-left: 0;
-        padding-right: 50px;
-        padding-left: 0;
-      }
-
-      &:nth-child(even) {
-        margin-left: 50%;
-        padding-left: 50px;
-        padding-right: 0;
-      }
-    }
-
-    &::before {
-      @media (min-width: 768px) {
-        right: -9px;
-        left: auto;
-      }
-    }
-
-    &:nth-child(even)::before {
-      @media (min-width: 768px) {
-        left: -9px;
-        right: auto;
-      }
-    }
-  }
-
+  // Timeline - DO NOT change layout, only text alignment
   .timeline-card {
     text-align: right;
   }
