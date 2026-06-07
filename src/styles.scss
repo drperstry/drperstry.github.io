@@ -242,8 +242,15 @@ body {
   .about-icon { margin-left: 1.5rem; margin-right: 0; }
   .stat-card { text-align: center; }
 
-  // Timeline - DO NOT change layout, only text alignment
+  // Timeline - Fix positioning to match LTR layout exactly
+  .timeline {
+    direction: ltr; // Force LTR direction for layout positioning
+  }
+  .timeline-item {
+    direction: ltr; // Keep positioning in LTR mode
+  }
   .timeline-card {
+    direction: rtl; // Only the card content should be RTL
     text-align: right;
   }
   .timeline-header { flex-direction: row-reverse; flex-wrap: wrap; }
@@ -251,13 +258,23 @@ body {
   .timeline-meta { flex-direction: row-reverse; flex-wrap: wrap; gap: 1rem; }
   .timeline-meta span { flex-direction: row-reverse; display: inline-flex; align-items: center; }
   .timeline-meta i { margin-left: 0.5rem; margin-right: 0; }
-  .timeline-description { padding-right: 0; padding-left: 0; }
-  .timeline-description li {
-    flex-direction: row-reverse;
-    text-align: right;
-    &::before { margin-left: 0.75rem; margin-right: 0; }
+  .timeline-description {
+    direction: rtl;
+    li {
+      padding-left: 0;
+      padding-right: 1.5rem;
+      text-align: right;
+      &::before {
+        left: auto;
+        right: 0;
+      }
+    }
   }
-  .timeline-technologies { justify-content: flex-start; flex-direction: row-reverse; }
+  .timeline-technologies {
+    direction: rtl;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
 
   // Skills
   .skills-grid { direction: rtl; }

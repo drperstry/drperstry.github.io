@@ -10,30 +10,38 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "name": "Abdulrahman Huwais",
+    "name": "Abdulrahman Alhuwais",
     "roles": ["Senior Software Engineer", "DevOps Engineer", "CRM Specialist", "Problem Solver"],
-    "description": "Passionate software engineer with expertise in enterprise solutions, CRM platforms, and DevOps practices.",
+    "description": "Senior Software Engineer with 4+ years of experience delivering banking and enterprise solutions across CRM, backend systems, DevOps, and cloud platforms.",
     "cta": "View My Work",
     "contactBtn": "Get In Touch"
   },
   "about": {
     "tag": "Who I Am",
     "title": "About Me",
-    "subtitle": "A passionate software engineer dedicated to building scalable and impactful solutions.",
-    "bio1": "I'm a Senior Software Engineer with over 3 years of professional experience in enterprise software development, CRM platforms, and DevOps engineering. I specialize in building robust, scalable solutions that make a real impact.",
-    "bio2": "My journey spans across top Saudi financial institutions including Saudi Aramco, Al Rajhi Bank, and Albilad Bank, where I've led development of critical systems and improved operational efficiency.",
+    "subtitle": "Experienced in modernizing legacy applications, improving software quality, and building scalable solutions.",
+    "bio1": "I'm a Senior Software Engineer with over 4 years of professional experience delivering banking and enterprise solutions across CRM, backend systems, DevOps, and cloud platforms.",
+    "bio2": "My journey spans across top Saudi institutions including Saudi Aramco, Al Rajhi Bank, Minthar, and Albilad Bank, where I've modernized legacy applications, automated deployments, and built scalable solutions that enhance operational efficiency.",
     "education": {
       "label": "Education",
-      "degree": "Bachelor of Science in Computer Science",
+      "degree": "Bachelor's Degree - Software Engineering",
       "university": "King Fahd University of Petroleum and Minerals",
-      "period": "2018 – 2022",
-      "gpa": "GPA: 3.09 / 4.0"
+      "period": "Sep 2016 – May 2022",
+      "gpa": "Graduated with Honor Class",
+      "concentration": "Cyber Security and Blockchain Concentration"
+    },
+    "certifications": {
+      "label": "Certifications",
+      "items": [
+        "Microsoft Certified: Power Platform Fundamentals (PL-900)",
+        "Microsoft Certified: Power Platform Functional Consultant (PL-200)"
+      ]
     },
     "stats": [
-      { "value": "3+", "label": "Years Experience" },
+      { "value": "4+", "label": "Years Experience" },
       { "value": "4", "label": "Companies" },
       { "value": "10+", "label": "Projects Built" },
-      { "value": "2", "label": "Chrome Extensions" }
+      { "value": "2", "label": "Certifications" }
     ]
   },
   "experience": {
@@ -47,20 +55,20 @@
         "location": "Dhahran",
         "period": "May 2021 – Aug 2021",
         "description": [
-          "Implementation of a desktop app and a website based on multiple department requirements"
+          "Developed desktop and web applications based on requirements gathered from multiple business departments"
         ],
         "technologies": [".NET", "JavaScript", "Access DB", "SQL"]
       },
       {
         "title": "Software Engineer",
-        "company": "Ejada & AL Rajhi Bank",
+        "company": "Ejada & Al Rajhi Bank",
         "location": "Riyadh",
         "period": "Oct 2022 – Apr 2025",
         "description": [
-          "Implemented WCF services, custom activities, plugins, and customizations",
-          "Designed and implemented a custom CI/CD pipeline for CRM Solutions",
-          "Built operational and monitoring tools to track system health and perform administrative tasks",
-          "Improved delivery quality by reviewing, identifying risks early, and recommending best practices"
+          "Developed Dynamics CRM solutions including plugins, workflows and services",
+          "Designed and implemented a CI/CD pipeline for CRM solution deployment",
+          "Built operational and monitoring tools that improved administration and support efficiency",
+          "Code reviews and promoted best practices to improve delivery quality and reduce risks"
         ],
         "technologies": ["CRM Dynamics", "Jira", "Angular", "JavaScript", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ"]
       },
@@ -70,12 +78,12 @@
         "location": "Riyadh",
         "period": "Jul 2024 – Oct 2024",
         "description": [
-          "Boilerplate for Bitbucket CI/CD in IIS",
-          "ETL Job from scraping data using site APIs to transforming until loading into new Database",
-          "Maintaining Cloud providers and SQL Cloud migration as well as other assets",
-          "Automated Administrative tasks with SQL maintenance jobs and PowerShell scripts"
+          "Established reusable CI/CD templates for IIS-hosted applications using Bitbucket",
+          "Built an ETL pipeline from web scraping external APIs to transformed analytical databases",
+          "Managed cloud infrastructure and SQL Server cloud migrations",
+          "Automated administrative and maintenance tasks using PowerShell and SQL jobs"
         ],
-        "technologies": ["AWS", "Google Cloud", "Jira", "SQL Server", "PowerShell", ".NET Core", "React"]
+        "technologies": ["AWS", "Google Cloud", "Bitbucket CI/CD", "SQL Server", "PowerShell", ".NET Core", "React"]
       },
       {
         "title": "Senior Software Engineer",
@@ -83,13 +91,13 @@
         "location": "Riyadh",
         "period": "Apr 2025 – Present",
         "description": [
-          "Designed and implemented a custom notification system for Azure DevOps Work Items",
-          "Improving user experience and expanding reporting and analytics capabilities",
-          "Resolved security vulnerabilities, improving compliance and system stability",
-          "Contributed in building CI/CD pipeline for CRM Platform",
-          "Third level support for production issues"
+          "Re-implemented public-facing banking APIs from legacy ASMX services to modern .NET Core architecture",
+          "Developed branch appointment management module for customers on SharePoint",
+          "Designed and developed internal tools for notifications, archival, document scanning, and data migration",
+          "Resolved security vulnerabilities and contributed to CRM CI/CD pipeline implementation",
+          "Provided third-level production support for critical banking systems"
         ],
-        "technologies": ["CRM Dynamics", "Azure DevOps", "React", "JavaScript", ".NET Core", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ", "HangFire"]
+        "technologies": ["CRM Dynamics", "Azure DevOps", "SharePoint", ".NET Core", ".NET Framework", "SQL Server", "SSIS", "SSRS"]
       }
     ]
   },
@@ -100,13 +108,13 @@
     "hardSkillsTitle": "Technical Skills",
     "softSkillsTitle": "Soft Skills",
     "hardSkills": [
+      { "name": "C# / .NET Core / .NET Framework", "level": 95, "icon": "fab fa-microsoft" },
+      { "name": "Microsoft Dynamics CRM", "level": 92, "icon": "fas fa-users-cog" },
+      { "name": "SQL Server / SSIS / SSRS", "level": 90, "icon": "fas fa-database" },
       { "name": "DevOps & CI/CD", "level": 90, "icon": "fas fa-cogs" },
-      { "name": ".NET / C#", "level": 95, "icon": "fab fa-microsoft" },
-      { "name": "SQL & Data Analysis", "level": 90, "icon": "fas fa-database" },
-      { "name": "MS CRM Dynamics", "level": 92, "icon": "fas fa-users-cog" },
-      { "name": "JavaScript / TypeScript", "level": 85, "icon": "fab fa-js" },
-      { "name": "Web Development", "level": 85, "icon": "fas fa-code" },
-      { "name": "Cloud (AWS/Azure/GCP)", "level": 80, "icon": "fas fa-cloud" },
+      { "name": "JavaScript / Angular / React", "level": 85, "icon": "fab fa-js" },
+      { "name": "SharePoint", "level": 85, "icon": "fab fa-microsoft" },
+      { "name": "Cloud (AWS / Azure / GCP)", "level": 80, "icon": "fas fa-cloud" },
       { "name": "Power BI", "level": 75, "icon": "fas fa-chart-bar" }
     ],
     "softSkills": ["Continuous Improvement", "Discipline", "Communication", "Problem Solving", "Team Leadership", "Analytical Thinking"]
@@ -251,7 +259,7 @@
     ]
   },
   "footer": {
-    "name": "Abdulrahman Huwais",
+    "name": "Abdulrahman Alhuwais",
     "role": "Senior Software Engineer",
     "rights": "All rights reserved.",
     "builtWith": "Built with Angular"

@@ -12,28 +12,36 @@
     "greeting": "مرحباً، أنا",
     "name": "عبدالرحمن الحويس",
     "roles": ["مهندس برمجيات أول", "مهندس DevOps", "متخصص CRM", "حلّال مشكلات"],
-    "description": "مهندس برمجيات شغوف بخبرة في الحلول المؤسسية ومنصات CRM وممارسات DevOps.",
+    "description": "مهندس برمجيات أول بخبرة تتجاوز 4 سنوات في تقديم حلول مصرفية ومؤسسية عبر أنظمة CRM والأنظمة الخلفية وDevOps والمنصات السحابية.",
     "cta": "عرض أعمالي",
     "contactBtn": "تواصل معي"
   },
   "about": {
     "tag": "من أنا",
     "title": "عني",
-    "subtitle": "مهندس برمجيات متحمس مكرّس لبناء حلول قابلة للتوسع وذات تأثير حقيقي.",
-    "bio1": "أنا مهندس برمجيات أول بخبرة مهنية تتجاوز 3 سنوات في تطوير البرمجيات المؤسسية ومنصات CRM وهندسة DevOps. أتخصص في بناء حلول قوية وقابلة للتوسع تحدث تأثيراً حقيقياً.",
-    "bio2": "مسيرتي المهنية تمتد عبر كبرى المؤسسات المالية السعودية بما فيها أرامكو السعودية وبنك الراجحي وبنك البلاد، حيث قدت تطوير أنظمة حيوية وحسّنت الكفاءة التشغيلية.",
+    "subtitle": "خبرة في تحديث التطبيقات القديمة وتحسين جودة البرمجيات وبناء حلول قابلة للتوسع.",
+    "bio1": "أنا مهندس برمجيات أول بخبرة مهنية تتجاوز 4 سنوات في تقديم حلول مصرفية ومؤسسية عبر أنظمة CRM والأنظمة الخلفية وDevOps والمنصات السحابية.",
+    "bio2": "مسيرتي المهنية تمتد عبر كبرى المؤسسات السعودية بما فيها أرامكو السعودية وبنك الراجحي ومنذر وبنك البلاد، حيث قمت بتحديث التطبيقات القديمة وأتمتة عمليات النشر وبناء حلول قابلة للتوسع تعزز الكفاءة التشغيلية.",
     "education": {
       "label": "التعليم",
-      "degree": "بكالوريوس علوم الحاسب",
+      "degree": "بكالوريوس هندسة البرمجيات",
       "university": "جامعة الملك فهد للبترول والمعادن",
-      "period": "2016 – 2022",
-      "gpa": "المعدل: 3.09 / 4.0"
+      "period": "سبتمبر 2016 – مايو 2022",
+      "gpa": "تخرج بمرتبة الشرف",
+      "concentration": "تخصص الأمن السيبراني والبلوكتشين"
+    },
+    "certifications": {
+      "label": "الشهادات",
+      "items": [
+        "Microsoft Certified: Power Platform Fundamentals (PL-900)",
+        "Microsoft Certified: Power Platform Functional Consultant (PL-200)"
+      ]
     },
     "stats": [
-      { "value": "+3", "label": "سنوات خبرة" },
+      { "value": "+4", "label": "سنوات خبرة" },
       { "value": "4", "label": "شركات" },
       { "value": "+10", "label": "مشاريع منجزة" },
-      { "value": "2", "label": "إضافات كروم" }
+      { "value": "2", "label": "شهادات" }
     ]
   },
   "experience": {
@@ -47,7 +55,7 @@
         "location": "الظهران",
         "period": "مايو 2021 – أغسطس 2021",
         "description": [
-          "تطوير تطبيق سطح مكتب وموقع إلكتروني بناءً على متطلبات أقسام متعددة"
+          "تطوير تطبيقات سطح المكتب والويب بناءً على متطلبات جُمعت من أقسام أعمال متعددة"
         ],
         "technologies": [".NET", "JavaScript", "Access DB", "SQL"]
       },
@@ -57,10 +65,10 @@
         "location": "الرياض",
         "period": "أكتوبر 2022 – أبريل 2025",
         "description": [
-          "تطوير خدمات WCF وأنشطة مخصصة وإضافات وتخصيصات",
-          "تصميم وتنفيذ مسار CI/CD مخصص لحلول CRM",
-          "بناء أدوات تشغيلية ومراقبة لتتبع صحة النظام وتنفيذ مهام إدارية",
-          "تحسين جودة التسليم بمراجعة المشاريع والتعرف المبكر على المخاطر وتوصية أفضل الممارسات"
+          "تطوير حلول Dynamics CRM تشمل الإضافات وسير العمل والخدمات",
+          "تصميم وتنفيذ مسار CI/CD لنشر حلول CRM",
+          "بناء أدوات تشغيلية ومراقبة حسّنت كفاءة الإدارة والدعم",
+          "مراجعة الكود وتعزيز أفضل الممارسات لتحسين جودة التسليم وتقليل المخاطر"
         ],
         "technologies": ["CRM Dynamics", "Jira", "Angular", "JavaScript", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ"]
       },
@@ -70,12 +78,12 @@
         "location": "الرياض",
         "period": "يوليو 2024 – أكتوبر 2024",
         "description": [
-          "قالب CI/CD عبر Bitbucket على IIS",
-          "مهمة ETL من استخراج البيانات عبر واجهات برمجة المواقع إلى تحويلها وتحميلها في قاعدة بيانات جديدة",
-          "صيانة مزودي الخدمة السحابية وترحيل SQL السحابي وأصول أخرى",
-          "أتمتة المهام الإدارية بوظائف صيانة SQL ونصوص PowerShell"
+          "إنشاء قوالب CI/CD قابلة لإعادة الاستخدام لتطبيقات IIS باستخدام Bitbucket",
+          "بناء مسار ETL من استخراج البيانات عبر واجهات APIs الخارجية إلى قواعد بيانات تحليلية محوّلة",
+          "إدارة البنية التحتية السحابية وترحيل SQL Server السحابي",
+          "أتمتة المهام الإدارية والصيانة باستخدام PowerShell ووظائف SQL"
         ],
-        "technologies": ["AWS", "Google Cloud", "Jira", "SQL Server", "PowerShell", ".NET Core", "React"]
+        "technologies": ["AWS", "Google Cloud", "Bitbucket CI/CD", "SQL Server", "PowerShell", ".NET Core", "React"]
       },
       {
         "title": "مهندس برمجيات أول",
@@ -83,13 +91,13 @@
         "location": "الرياض",
         "period": "أبريل 2025 – حتى الآن",
         "description": [
-          "تصميم وتنفيذ نظام إشعارات مخصص لعناصر عمل Azure DevOps",
-          "تحسين تجربة المستخدم وتوسيع قدرات التقارير والتحليلات",
-          "حل الثغرات الأمنية وتحسين الامتثال واستقرار النظام",
-          "المساهمة في بناء مسار CI/CD لمنصة CRM",
-          "دعم المستوى الثالث لمشاكل الإنتاج"
+          "إعادة تنفيذ واجهات APIs المصرفية العامة من خدمات ASMX القديمة إلى بنية .NET Core حديثة",
+          "تطوير وحدة إدارة مواعيد الفروع للعملاء على SharePoint",
+          "تصميم وتطوير أدوات داخلية للإشعارات والأرشفة ومسح المستندات وترحيل البيانات",
+          "حل الثغرات الأمنية والمساهمة في تنفيذ مسار CI/CD لنظام CRM",
+          "تقديم دعم المستوى الثالث للأنظمة المصرفية الحيوية"
         ],
-        "technologies": ["CRM Dynamics", "Azure DevOps", "React", "JavaScript", ".NET Core", ".NET Framework", "SQL Server", "SSIS", "SSRS", "IBM MQ", "HangFire"]
+        "technologies": ["CRM Dynamics", "Azure DevOps", "SharePoint", ".NET Core", ".NET Framework", "SQL Server", "SSIS", "SSRS"]
       }
     ]
   },
@@ -100,13 +108,13 @@
     "hardSkillsTitle": "المهارات التقنية",
     "softSkillsTitle": "المهارات الشخصية",
     "hardSkills": [
-      { "name": "DevOps وCI/CD", "level": 90, "icon": "fas fa-cogs" },
-      { "name": ".NET / C#", "level": 95, "icon": "fab fa-microsoft" },
-      { "name": "SQL وتحليل البيانات", "level": 90, "icon": "fas fa-database" },
-      { "name": "MS CRM Dynamics", "level": 92, "icon": "fas fa-users-cog" },
-      { "name": "JavaScript / TypeScript", "level": 85, "icon": "fab fa-js" },
-      { "name": "تطوير الويب", "level": 85, "icon": "fas fa-code" },
-      { "name": "الحوسبة السحابية", "level": 80, "icon": "fas fa-cloud" },
+      { "name": "C# / .NET Core / .NET Framework", "level": 95, "icon": "fab fa-microsoft" },
+      { "name": "Microsoft Dynamics CRM", "level": 92, "icon": "fas fa-users-cog" },
+      { "name": "SQL Server / SSIS / SSRS", "level": 90, "icon": "fas fa-database" },
+      { "name": "DevOps و CI/CD", "level": 90, "icon": "fas fa-cogs" },
+      { "name": "JavaScript / Angular / React", "level": 85, "icon": "fab fa-js" },
+      { "name": "SharePoint", "level": 85, "icon": "fab fa-microsoft" },
+      { "name": "الحوسبة السحابية (AWS / Azure / GCP)", "level": 80, "icon": "fas fa-cloud" },
       { "name": "Power BI", "level": 75, "icon": "fas fa-chart-bar" }
     ],
     "softSkills": ["التحسين المستمر", "الانضباط", "التواصل", "حل المشكلات", "قيادة الفريق", "التفكير التحليلي"]
