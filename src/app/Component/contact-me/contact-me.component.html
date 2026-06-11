@@ -19,19 +19,21 @@
       <!-- Contact Methods -->
       <div class="contact-methods" data-aos="fade-right">
         <div class="methods-grid">
-          <a *ngFor="let method of contactMethods; let i = index"
-             [href]="method.link" target="_blank" rel="noopener"
-             class="contact-card"
-             [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="i * 80">
-            <div class="card-icon" [style.background]="'linear-gradient(135deg, ' + method.color + '22, ' + method.color + '44)'">
-              <i [class]="method.icon" [style.color]="method.color"></i>
-            </div>
-            <div class="card-content">
-              <span class="card-title">{{ method.title }}</span>
-              <span class="card-value">{{ method.value }}</span>
-            </div>
-            <i class="fas fa-arrow-right card-arrow"></i>
-          </a>
+          @for (method of contactMethods; track method; let i = $index) {
+            <a
+              [href]="method.link" target="_blank" rel="noopener"
+              class="contact-card"
+              [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="i * 80">
+              <div class="card-icon" [style.background]="'linear-gradient(135deg, ' + method.color + '22, ' + method.color + '44)'">
+                <i [class]="method.icon" [style.color]="method.color"></i>
+              </div>
+              <div class="card-content">
+                <span class="card-title">{{ method.title }}</span>
+                <span class="card-value">{{ method.value }}</span>
+              </div>
+              <i class="fas fa-arrow-right card-arrow"></i>
+            </a>
+          }
         </div>
 
         <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="download-card" data-aos="fade-up">
@@ -59,9 +61,11 @@
                 {{ 'contact.nameLabel' | translate }}
               </label>
               <input type="text" id="name" formControlName="name"
-                     [placeholder]="'contact.namePlaceholder' | translate"
-                     [class.error]="isFieldInvalid('name')">
-              <span class="error-message" *ngIf="isFieldInvalid('name')">Required (min 2 chars)</span>
+                [placeholder]="'contact.namePlaceholder' | translate"
+                [class.error]="isFieldInvalid('name')">
+              @if (isFieldInvalid('name')) {
+                <span class="error-message">Required (min 2 chars)</span>
+              }
             </div>
 
             <div class="form-group">
@@ -70,9 +74,11 @@
                 {{ 'contact.emailLabel' | translate }}
               </label>
               <input type="email" id="email" formControlName="email"
-                     [placeholder]="'contact.emailPlaceholder' | translate"
-                     [class.error]="isFieldInvalid('email')">
-              <span class="error-message" *ngIf="isFieldInvalid('email')">Valid email required</span>
+                [placeholder]="'contact.emailPlaceholder' | translate"
+                [class.error]="isFieldInvalid('email')">
+              @if (isFieldInvalid('email')) {
+                <span class="error-message">Valid email required</span>
+              }
             </div>
           </div>
 
@@ -82,9 +88,11 @@
               {{ 'contact.subjectLabel' | translate }}
             </label>
             <input type="text" id="subject" formControlName="subject"
-                   [placeholder]="'contact.subjectPlaceholder' | translate"
-                   [class.error]="isFieldInvalid('subject')">
-            <span class="error-message" *ngIf="isFieldInvalid('subject')">Subject is required</span>
+              [placeholder]="'contact.subjectPlaceholder' | translate"
+              [class.error]="isFieldInvalid('subject')">
+            @if (isFieldInvalid('subject')) {
+              <span class="error-message">Subject is required</span>
+            }
           </div>
 
           <div class="form-group">
@@ -93,26 +101,34 @@
               {{ 'contact.messageLabel' | translate }}
             </label>
             <textarea id="message" formControlName="message" rows="5"
-                      [placeholder]="'contact.messagePlaceholder' | translate"
-                      [class.error]="isFieldInvalid('message')"></textarea>
-            <span class="error-message" *ngIf="isFieldInvalid('message')">Required (min 10 chars)</span>
+              [placeholder]="'contact.messagePlaceholder' | translate"
+            [class.error]="isFieldInvalid('message')"></textarea>
+            @if (isFieldInvalid('message')) {
+              <span class="error-message">Required (min 10 chars)</span>
+            }
           </div>
 
           <button type="submit" class="submit-btn" [disabled]="isSubmitting" [class.submitting]="isSubmitting">
-            <span *ngIf="!isSubmitting">
-              <i class="fas fa-paper-plane"></i>
-              {{ 'contact.sendBtn' | translate }}
-            </span>
-            <span *ngIf="isSubmitting" class="loading">
-              <i class="fas fa-spinner fa-spin"></i>
-              {{ 'contact.sendingBtn' | translate }}
-            </span>
+            @if (!isSubmitting) {
+              <span>
+                <i class="fas fa-paper-plane"></i>
+                {{ 'contact.sendBtn' | translate }}
+              </span>
+            }
+            @if (isSubmitting) {
+              <span class="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                {{ 'contact.sendingBtn' | translate }}
+              </span>
+            }
           </button>
 
-          <div class="success-message" *ngIf="submitSuccess" data-aos="fade-up">
-            <i class="fas fa-check-circle"></i>
-            <span>{{ 'contact.successMsg' | translate }}</span>
-          </div>
+          @if (submitSuccess) {
+            <div class="success-message" data-aos="fade-up">
+              <i class="fas fa-check-circle"></i>
+              <span>{{ 'contact.successMsg' | translate }}</span>
+            </div>
+          }
         </form>
       </div>
     </div>

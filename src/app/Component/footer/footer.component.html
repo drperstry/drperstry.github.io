@@ -35,11 +35,13 @@
       <div class="footer-social">
         <h4>Connect</h4>
         <div class="social-icons">
-          <a *ngFor="let social of socialLinks"
-             [href]="social.url" target="_blank" rel="noopener"
-             [attr.aria-label]="social.label" class="social-icon">
-            <i [class]="social.icon"></i>
-          </a>
+          @for (social of socialLinks; track social) {
+            <a
+              [href]="social.url" target="_blank" rel="noopener"
+              [attr.aria-label]="social.label" class="social-icon">
+              <i [class]="social.icon"></i>
+            </a>
+          }
         </div>
       </div>
     </div>

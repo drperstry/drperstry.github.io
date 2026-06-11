@@ -74,10 +74,12 @@
       </div>
 
       <div class="about-stats" data-aos="fade-left">
-        <div class="stat-card" *ngFor="let stat of stats">
-          <span class="stat-number">{{ stat.value }}</span>
-          <span class="stat-label">{{ stat.label }}</span>
-        </div>
+        @for (stat of stats; track stat) {
+          <div class="stat-card">
+            <span class="stat-number">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
       </div>
     </div>
   </div>
@@ -94,34 +96,40 @@
     <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">{{ 'experience.subtitle' | translate }}</p>
 
     <div class="timeline">
-      <div class="timeline-item" *ngFor="let exp of experiences; let i = index"
-           [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-           [attr.data-aos-delay]="i * 100">
-        <div class="timeline-card">
-          <div class="timeline-header">
-            <div class="timeline-title-group">
-              <h3 class="timeline-title">{{ exp.title }}</h3>
-              <span class="timeline-company">{{ exp.company }}</span>
+      @for (exp of experiences; track exp; let i = $index) {
+        <div class="timeline-item"
+          [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+          [attr.data-aos-delay]="i * 100">
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-title-group">
+                <h3 class="timeline-title">{{ exp.title }}</h3>
+                <span class="timeline-company">{{ exp.company }}</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">
+                  <i class="far fa-calendar-alt"></i>
+                  {{ exp.period }}
+                </span>
+                <span class="timeline-location">
+                  <i class="fas fa-map-marker-alt"></i>
+                  {{ exp.location }}
+                </span>
+              </div>
             </div>
-            <div class="timeline-meta">
-              <span class="timeline-period">
-                <i class="far fa-calendar-alt"></i>
-                {{ exp.period }}
-              </span>
-              <span class="timeline-location">
-                <i class="fas fa-map-marker-alt"></i>
-                {{ exp.location }}
-              </span>
+            <ul class="timeline-description">
+              @for (desc of exp.description; track desc) {
+                <li>{{ desc }}</li>
+              }
+            </ul>
+            <div class="timeline-technologies">
+              @for (tech of exp.technologies; track tech) {
+                <span class="tech-tag">{{ tech }}</span>
+              }
             </div>
-          </div>
-          <ul class="timeline-description">
-            <li *ngFor="let desc of exp.description">{{ desc }}</li>
-          </ul>
-          <div class="timeline-technologies">
-            <span class="tech-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
           </div>
         </div>
-      </div>
+      }
     </div>
   </div>
 </section>
@@ -143,19 +151,21 @@
           {{ 'skills.hardSkillsTitle' | translate }}
         </h3>
         <div class="skills-list">
-          <div class="skill-item" *ngFor="let skill of hardSkills; let i = index"
-               [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="200 + (i * 50)">
-            <div class="skill-header">
-              <div class="skill-info">
-                <i [class]="skill.icon"></i>
-                <span>{{ skill.name }}</span>
+          @for (skill of hardSkills; track skill; let i = $index) {
+            <div class="skill-item"
+              [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="200 + (i * 50)">
+              <div class="skill-header">
+                <div class="skill-info">
+                  <i [class]="skill.icon"></i>
+                  <span>{{ skill.name }}</span>
+                </div>
+                <span class="skill-percentage">{{ skill.level }}%</span>
               </div>
-              <span class="skill-percentage">{{ skill.level }}%</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" [style.width.%]="skill.level"></div>
+              </div>
             </div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" [style.width.%]="skill.level"></div>
-            </div>
-          </div>
+          }
         </div>
       </div>
 
@@ -165,11 +175,13 @@
           {{ 'skills.softSkillsTitle' | translate }}
         </h3>
         <div class="soft-skills-grid">
-          <div class="soft-skill-card" *ngFor="let skill of softSkills; let i = index"
-               [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="300 + (i * 50)">
-            <i class="fas fa-check-circle"></i>
-            <span>{{ skill }}</span>
-          </div>
+          @for (skill of softSkills; track skill; let i = $index) {
+            <div class="soft-skill-card"
+              [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="300 + (i * 50)">
+              <i class="fas fa-check-circle"></i>
+              <span>{{ skill }}</span>
+            </div>
+          }
         </div>
       </div>
     </div>
