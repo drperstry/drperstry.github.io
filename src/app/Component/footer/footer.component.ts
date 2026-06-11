@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
+  imports: [RouterLink, TranslatePipe]
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   currentYear = new Date().getFullYear();
 
   socialLinks = [
@@ -14,8 +17,4 @@ export class FooterComponent implements OnInit {
     { icon: 'fas fa-envelope', url: 'mailto:abdulrahmanhuwais@gmail.com', label: 'Email' },
     { icon: 'fab fa-whatsapp', url: 'https://wa.me/966503810471', label: 'WhatsApp' }
   ];
-
-  constructor() { }
-
-  ngOnInit(): void { }
 }

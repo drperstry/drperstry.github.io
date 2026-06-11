@@ -1,19 +1,29 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+
+interface ContactMethod {
+  icon: string;
+  title: string;
+  value: string;
+  link: string;
+  color: string;
+  dir?: 'ltr';
+}
 
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+  styleUrls: ['./contact-me.component.scss'],
+  imports: [ReactiveFormsModule, TranslatePipe]
 })
 export class ContactMeComponent implements OnInit, OnDestroy {
   contactForm!: FormGroup;
   isSubmitting = false;
   submitSuccess = false;
-  contactMethods: any[] = [];
+  contactMethods: ContactMethod[] = [];
   private destroy$ = new Subject<void>();
 
   constructor(private fb: FormBuilder, private translate: TranslateService) {}
@@ -37,17 +47,21 @@ export class ContactMeComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  isExternal(method: ContactMethod): boolean {
+    return method.link.startsWith('http');
+  }
+
   private loadMethods(): void {
-    this.translate.get('contact.methods').subscribe(methods => {
-      this.contactMethods = methods || [];
-    });
+    this.translate.get('contact.methods')
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(methods => {
+        this.contactMethods = Array.isArray(methods) ? methods : [];
+      });
   }
 
   onSubmit(): void {
     if (this.contactForm.invalid) {
-      Object.keys(this.contactForm.controls).forEach(key =>
-        this.contactForm.get(key)?.markAsTouched()
-      );
+      this.contactForm.markAllAsTouched();
       return;
     }
 

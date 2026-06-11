@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 // Custom CSS Variables
 :root {
   --primary: #6366f1;
@@ -206,8 +202,13 @@ body {
 }
 
 // Exclude elements that need instant transitions (like animations)
-.gradient-orb, .cursor-glow, .cursor-dot, .skill-bar-fill {
+.gradient-orb, .cursor-glow, .cursor-dot {
   transition: none;
+}
+
+// Skill bars fill up when scrolled into view
+.skill-bar-fill {
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 // Layout transitions for RTL changes
@@ -224,6 +225,14 @@ body {
 [dir="rtl"] {
   font-family: 'Noto Sans Arabic', 'Inter', system-ui, sans-serif;
   text-align: right;
+
+  // Keep phone numbers, emails, and other LTR-only values readable:
+  // without isolation the bidi algorithm moves "+" to the wrong side
+  // and reorders digit groups inside RTL text.
+  [dir="ltr"] {
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
 
   // Navigation
   .nav-container { flex-direction: row-reverse; }
@@ -438,4 +447,60 @@ a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
 .glow {
   box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
   &:hover { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+}
+
+// Back To Top button
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  inset-inline-end: 2rem;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-card-solid);
+  color: var(--primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
+              background-color 0.3s ease, color 0.3s ease;
+  z-index: 900;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+}
+
+// Visible keyboard focus
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+// Respect reduced-motion preferences
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .cursor-glow, .cursor-dot { display: none !important; }
 }
