@@ -5,9 +5,10 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-contact-me',
-  templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+    selector: 'app-contact-me',
+    templateUrl: './contact-me.component.html',
+    styleUrls: ['./contact-me.component.scss'],
+    standalone: false
 })
 export class ContactMeComponent implements OnInit, OnDestroy {
   contactForm!: FormGroup;

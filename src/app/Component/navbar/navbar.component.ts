@@ -8,9 +8,10 @@ import { setLanguage, toggleTheme } from '../../store/actions/app.actions';
 import { selectLanguage, selectTheme } from '../../store/selectors/app.selectors';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
+    standalone: false
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   isScrolled = false;
