@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { StoreModule } from '@ngrx/store';
@@ -17,28 +17,22 @@ import { NavbarComponent } from './Component/navbar/navbar.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { appReducer } from './store/reducers/app.reducer';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ContactMeComponent,
-    ProductsComponent,
-    NavbarComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    StoreModule.forRoot({ app: appReducer }),
-    TranslateModule.forRoot({ defaultLanguage: 'en' })
-  ],
-  providers: [
-    provideTranslateHttpLoader({ prefix: './assets/i18n/', suffix: '.json' })
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        ContactMeComponent,
+        ProductsComponent,
+        NavbarComponent,
+        FooterComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        StoreModule.forRoot({ app: appReducer }),
+        TranslateModule.forRoot({ defaultLanguage: 'en' })], providers: [
+        provideTranslateHttpLoader({ prefix: './assets/i18n/', suffix: '.json' }),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
