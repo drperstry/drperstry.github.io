@@ -1,23 +1,31 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { TranslatePipe } from '@ngx-translate/core';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { takeUntil, filter } from 'rxjs/operators';
 import { AppState, Language, Theme } from '../../store/app.state';
 import { setLanguage, toggleTheme } from '../../store/actions/app.actions';
 import { selectLanguage, selectTheme } from '../../store/selectors/app.selectors';
 
+const SECTION_IDS = ['about', 'experience', 'skills'];
+const NAVBAR_HEIGHT = 80;
+
 @Component({
-    selector: 'app-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    standalone: false
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  imports: [RouterLink, RouterLinkActive, TranslatePipe]
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   isScrolled = false;
   isMobileMenuOpen = false;
   currentLang: Language = 'en';
   currentTheme: Theme = 'dark';
+  scrollProgress = 0;
+  activeSection = '';
+  isHomeRoute = true;
+
   private destroy$ = new Subject<void>();
 
   constructor(
@@ -33,6 +41,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.store.select(selectTheme)
       .pipe(takeUntil(this.destroy$))
       .subscribe(theme => this.currentTheme = theme);
+
+    this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd), takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.isHomeRoute = this.router.url === '/' || this.router.url.startsWith('/#');
+        this.updateScrollState();
+      });
   }
 
   ngOnDestroy(): void {
@@ -40,9 +55,29 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  @HostListener('window:scroll', [])
+  @HostListener('window:scroll')
   onWindowScroll(): void {
+    this.updateScrollState();
+  }
+
+  private updateScrollState(): void {
     this.isScrolled = window.scrollY > 50;
+
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    this.scrollProgress = scrollable > 0 ? Math.min(100, (window.scrollY / scrollable) * 100) : 0;
+
+    this.activeSection = this.isHomeRoute ? this.findActiveSection() : '';
+  }
+
+  private findActiveSection(): string {
+    let active = '';
+    for (const id of SECTION_IDS) {
+      const element = document.getElementById(id);
+      if (element && element.getBoundingClientRect().top <= NAVBAR_HEIGHT + 100) {
+        active = id;
+      }
+    }
+    return active;
   }
 
   toggleMobileMenu(): void {
@@ -76,14 +111,18 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private performScroll(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navbarHeight = 80;
-      const targetPosition = element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
       this.smoothScrollTo(targetPosition, 1000);
     }
   }
 
   private smoothScrollTo(targetPosition: number, duration: number): void {
-    const startPosition = window.pageYOffset;
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      window.scrollTo(0, targetPosition);
+      return;
+    }
+
+    const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
     let startTime: number | null = null;
 

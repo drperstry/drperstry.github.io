@@ -3,3 +3,10 @@
   <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>
+
+<button class="back-to-top"
+        [class.visible]="showBackToTop"
+        (click)="scrollToTop()"
+        [attr.aria-label]="'nav.backToTop' | translate">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>

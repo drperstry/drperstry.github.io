@@ -16,30 +16,30 @@
     <p class="hero-description">{{ 'hero.description' | translate }}</p>
     <div class="hero-cta">
       <a routerLink="/contact" class="btn btn-primary">
-        <i class="fas fa-paper-plane"></i>
+        <i class="fas fa-paper-plane" aria-hidden="true"></i>
         {{ 'hero.contactBtn' | translate }}
       </a>
       <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn btn-outline">
-        <i class="fas fa-download"></i>
+        <i class="fas fa-download" aria-hidden="true"></i>
         {{ 'nav.downloadResume' | translate }}
       </a>
     </div>
     <div class="hero-socials">
-      <a href="https://github.com/drperstry" target="_blank" rel="noopener" class="social-link">
-        <i class="fab fa-github"></i>
+      <a href="https://github.com/drperstry" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
       </a>
-      <a href="https://www.linkedin.com/in/abdulrahman-alhuwais/" target="_blank" rel="noopener" class="social-link">
-        <i class="fab fa-linkedin-in"></i>
+      <a href="https://www.linkedin.com/in/abdulrahman-alhuwais/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
       </a>
-      <a href="mailto:abdulrahmanhuwais@gmail.com" class="social-link">
-        <i class="fas fa-envelope"></i>
+      <a href="mailto:abdulrahmanhuwais@gmail.com" class="social-link" aria-label="Email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
       </a>
     </div>
   </div>
 
   <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
     <div class="scroll-arrow">
-      <i class="fas fa-chevron-down"></i>
+      <i class="fas fa-chevron-down" aria-hidden="true"></i>
     </div>
   </div>
 </section>
@@ -48,7 +48,7 @@
 <section class="about section" id="about">
   <div class="container-custom">
     <span class="section-tag" data-aos="fade-up">
-      <i class="fas fa-user"></i>
+      <i class="fas fa-user" aria-hidden="true"></i>
       {{ 'about.tag' | translate }}
     </span>
     <h2 class="section-title" data-aos="fade-up">{{ 'about.title' | translate }}</h2>
@@ -61,7 +61,7 @@
 
         <div class="about-card">
           <div class="about-icon">
-            <i class="fas fa-graduation-cap"></i>
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
           </div>
           <div class="about-info">
             <h3>{{ 'about.education.label' | translate }}</h3>
@@ -74,9 +74,9 @@
       </div>
 
       <div class="about-stats" data-aos="fade-left">
-        @for (stat of stats; track stat) {
+        @for (stat of stats; track stat.label) {
           <div class="stat-card">
-            <span class="stat-number">{{ stat.value }}</span>
+            <span class="stat-number">{{ stat.prefix }}{{ statsRevealed ? stat.current : stat.target }}{{ stat.suffix }}</span>
             <span class="stat-label">{{ stat.label }}</span>
           </div>
         }
@@ -89,17 +89,17 @@
 <section class="experience section" id="experience">
   <div class="container-custom">
     <span class="section-tag" data-aos="fade-up">
-      <i class="fas fa-briefcase"></i>
+      <i class="fas fa-briefcase" aria-hidden="true"></i>
       {{ 'experience.tag' | translate }}
     </span>
     <h2 class="section-title" data-aos="fade-up">{{ 'experience.title' | translate }}</h2>
     <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">{{ 'experience.subtitle' | translate }}</p>
 
     <div class="timeline">
-      @for (exp of experiences; track exp; let i = $index) {
+      @for (exp of experiences; track exp.company; let i = $index) {
         <div class="timeline-item"
-          [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-          [attr.data-aos-delay]="i * 100">
+             [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+             [attr.data-aos-delay]="i * 100">
           <div class="timeline-card">
             <div class="timeline-header">
               <div class="timeline-title-group">
@@ -108,11 +108,11 @@
               </div>
               <div class="timeline-meta">
                 <span class="timeline-period">
-                  <i class="far fa-calendar-alt"></i>
+                  <i class="far fa-calendar-alt" aria-hidden="true"></i>
                   {{ exp.period }}
                 </span>
                 <span class="timeline-location">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                   {{ exp.location }}
                 </span>
               </div>
@@ -138,7 +138,7 @@
 <section class="skills section" id="skills">
   <div class="container-custom">
     <span class="section-tag" data-aos="fade-up">
-      <i class="fas fa-cog"></i>
+      <i class="fas fa-cog" aria-hidden="true"></i>
       {{ 'skills.tag' | translate }}
     </span>
     <h2 class="section-title" data-aos="fade-up">{{ 'skills.title' | translate }}</h2>
@@ -147,22 +147,21 @@
     <div class="skills-grid">
       <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
         <h3 class="category-title">
-          <i class="fas fa-code"></i>
+          <i class="fas fa-code" aria-hidden="true"></i>
           {{ 'skills.hardSkillsTitle' | translate }}
         </h3>
         <div class="skills-list">
-          @for (skill of hardSkills; track skill; let i = $index) {
-            <div class="skill-item"
-              [attr.data-aos]="'fade-up'" [attr.data-aos-delay]="200 + (i * 50)">
+          @for (skill of hardSkills; track skill.name; let i = $index) {
+            <div class="skill-item" data-aos="fade-up" [attr.data-aos-delay]="200 + (i * 50)">
               <div class="skill-header">
                 <div class="skill-info">
-                  <i [class]="skill.icon"></i>
+                  <i [class]="skill.icon" aria-hidden="true"></i>
                   <span>{{ skill.name }}</span>
                 </div>
                 <span class="skill-percentage">{{ skill.level }}%</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-bar-fill" [style.width.%]="skill.level"></div>
+                <div class="skill-bar-fill" [style.width.%]="skillsRevealed ? skill.level : 0"></div>
               </div>
             </div>
           }
@@ -171,14 +170,13 @@
 
       <div class="skills-category soft-skills" data-aos="fade-up" data-aos-delay="300">
         <h3 class="category-title">
-          <i class="fas fa-users"></i>
+          <i class="fas fa-users" aria-hidden="true"></i>
           {{ 'skills.softSkillsTitle' | translate }}
         </h3>
         <div class="soft-skills-grid">
           @for (skill of softSkills; track skill; let i = $index) {
-            <div class="soft-skill-card"
-              [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="300 + (i * 50)">
-              <i class="fas fa-check-circle"></i>
+            <div class="soft-skill-card" data-aos="zoom-in" [attr.data-aos-delay]="300 + (i * 50)">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
               <span>{{ skill }}</span>
             </div>
           }
@@ -196,11 +194,11 @@
       <p>{{ 'products.ctaSubtitle' | translate }}</p>
       <div class="cta-buttons">
         <a routerLink="/contact" class="btn btn-primary">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
           {{ 'nav.contact' | translate }}
         </a>
         <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="btn btn-outline">
-          <i class="fas fa-file-pdf"></i>
+          <i class="fas fa-file-pdf" aria-hidden="true"></i>
           {{ 'nav.downloadResume' | translate }}
         </a>
       </div>

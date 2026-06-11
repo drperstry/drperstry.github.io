@@ -8,7 +8,7 @@
   <div class="contact-container">
     <div class="contact-header" data-aos="fade-up">
       <span class="section-tag">
-        <i class="fas fa-satellite-dish"></i>
+        <i class="fas fa-satellite-dish" aria-hidden="true"></i>
         {{ 'contact.tag' | translate }}
       </span>
       <h1 class="contact-title">{{ 'contact.title' | translate }}</h1>
@@ -19,37 +19,38 @@
       <!-- Contact Methods -->
       <div class="contact-methods" data-aos="fade-right">
         <div class="methods-grid">
-          @for (method of contactMethods; track method; let i = $index) {
-            <a
-              [href]="method.link" target="_blank" rel="noopener"
-              class="contact-card"
-              [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="i * 80">
+          @for (method of contactMethods; track method.title; let i = $index) {
+            <a [href]="method.link"
+               [attr.target]="isExternal(method) ? '_blank' : null"
+               [attr.rel]="isExternal(method) ? 'noopener' : null"
+               class="contact-card"
+               data-aos="zoom-in" [attr.data-aos-delay]="i * 80">
               <div class="card-icon" [style.background]="'linear-gradient(135deg, ' + method.color + '22, ' + method.color + '44)'">
-                <i [class]="method.icon" [style.color]="method.color"></i>
+                <i [class]="method.icon" [style.color]="method.color" aria-hidden="true"></i>
               </div>
               <div class="card-content">
                 <span class="card-title">{{ method.title }}</span>
-                <span class="card-value">{{ method.value }}</span>
+                <span class="card-value" [attr.dir]="method.dir || null">{{ method.value }}</span>
               </div>
-              <i class="fas fa-arrow-right card-arrow"></i>
+              <i class="fas fa-arrow-right card-arrow" aria-hidden="true"></i>
             </a>
           }
         </div>
 
         <a href="assets/resume_AbdulrahmanHuwais.pdf" download class="download-card" data-aos="fade-up">
-          <div class="download-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="download-icon"><i class="fas fa-file-pdf" aria-hidden="true"></i></div>
           <div class="download-content">
             <span class="download-title">{{ 'nav.downloadResume' | translate }}</span>
-            <span class="download-subtitle">PDF format</span>
+            <span class="download-subtitle">{{ 'contact.resumeFormat' | translate }}</span>
           </div>
-          <i class="fas fa-download download-arrow"></i>
+          <i class="fas fa-download download-arrow" aria-hidden="true"></i>
         </a>
       </div>
 
       <!-- Contact Form -->
       <div class="contact-form-wrapper" data-aos="fade-left">
         <h2 class="form-title">
-          <i class="fas fa-paper-plane"></i>
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
           {{ 'contact.sendBtn' | translate }}
         </h2>
 
@@ -57,67 +58,66 @@
           <div class="form-row">
             <div class="form-group">
               <label for="name">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user" aria-hidden="true"></i>
                 {{ 'contact.nameLabel' | translate }}
               </label>
               <input type="text" id="name" formControlName="name"
-                [placeholder]="'contact.namePlaceholder' | translate"
-                [class.error]="isFieldInvalid('name')">
+                     [placeholder]="'contact.namePlaceholder' | translate"
+                     [class.error]="isFieldInvalid('name')">
               @if (isFieldInvalid('name')) {
-                <span class="error-message">Required (min 2 chars)</span>
+                <span class="error-message">{{ 'contact.errors.name' | translate }}</span>
               }
             </div>
 
             <div class="form-group">
               <label for="email">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" aria-hidden="true"></i>
                 {{ 'contact.emailLabel' | translate }}
               </label>
               <input type="email" id="email" formControlName="email"
-                [placeholder]="'contact.emailPlaceholder' | translate"
-                [class.error]="isFieldInvalid('email')">
+                     [placeholder]="'contact.emailPlaceholder' | translate"
+                     [class.error]="isFieldInvalid('email')">
               @if (isFieldInvalid('email')) {
-                <span class="error-message">Valid email required</span>
+                <span class="error-message">{{ 'contact.errors.email' | translate }}</span>
               }
             </div>
           </div>
 
           <div class="form-group">
             <label for="subject">
-              <i class="fas fa-tag"></i>
+              <i class="fas fa-tag" aria-hidden="true"></i>
               {{ 'contact.subjectLabel' | translate }}
             </label>
             <input type="text" id="subject" formControlName="subject"
-              [placeholder]="'contact.subjectPlaceholder' | translate"
-              [class.error]="isFieldInvalid('subject')">
+                   [placeholder]="'contact.subjectPlaceholder' | translate"
+                   [class.error]="isFieldInvalid('subject')">
             @if (isFieldInvalid('subject')) {
-              <span class="error-message">Subject is required</span>
+              <span class="error-message">{{ 'contact.errors.subject' | translate }}</span>
             }
           </div>
 
           <div class="form-group">
             <label for="message">
-              <i class="fas fa-comment-alt"></i>
+              <i class="fas fa-comment-alt" aria-hidden="true"></i>
               {{ 'contact.messageLabel' | translate }}
             </label>
             <textarea id="message" formControlName="message" rows="5"
-              [placeholder]="'contact.messagePlaceholder' | translate"
-            [class.error]="isFieldInvalid('message')"></textarea>
+                      [placeholder]="'contact.messagePlaceholder' | translate"
+                      [class.error]="isFieldInvalid('message')"></textarea>
             @if (isFieldInvalid('message')) {
-              <span class="error-message">Required (min 10 chars)</span>
+              <span class="error-message">{{ 'contact.errors.message' | translate }}</span>
             }
           </div>
 
           <button type="submit" class="submit-btn" [disabled]="isSubmitting" [class.submitting]="isSubmitting">
             @if (!isSubmitting) {
               <span>
-                <i class="fas fa-paper-plane"></i>
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
                 {{ 'contact.sendBtn' | translate }}
               </span>
-            }
-            @if (isSubmitting) {
+            } @else {
               <span class="loading">
-                <i class="fas fa-spinner fa-spin"></i>
+                <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
                 {{ 'contact.sendingBtn' | translate }}
               </span>
             }
@@ -125,7 +125,7 @@
 
           @if (submitSuccess) {
             <div class="success-message" data-aos="fade-up">
-              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
               <span>{{ 'contact.successMsg' | translate }}</span>
             </div>
           }

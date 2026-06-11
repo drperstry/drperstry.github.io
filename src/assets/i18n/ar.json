@@ -6,7 +6,8 @@
     "skills": "المهارات",
     "products": "المنتجات",
     "contact": "تواصل معي",
-    "downloadResume": "تحميل السيرة الذاتية"
+    "downloadResume": "تحميل السيرة الذاتية",
+    "backToTop": "العودة إلى الأعلى"
   },
   "hero": {
     "greeting": "مرحباً، أنا",
@@ -108,14 +109,14 @@
     "hardSkillsTitle": "المهارات التقنية",
     "softSkillsTitle": "المهارات الشخصية",
     "hardSkills": [
-      { "name": "C# / .NET Core / .NET Framework", "level": 95, "icon": "fab fa-microsoft" },
-      { "name": "Microsoft Dynamics CRM", "level": 92, "icon": "fas fa-users-cog" },
-      { "name": "SQL Server / SSIS / SSRS", "level": 90, "icon": "fas fa-database" },
-      { "name": "DevOps و CI/CD", "level": 90, "icon": "fas fa-cogs" },
-      { "name": "JavaScript / Angular / React", "level": 85, "icon": "fab fa-js" },
-      { "name": "SharePoint", "level": 85, "icon": "fab fa-microsoft" },
-      { "name": "الحوسبة السحابية (AWS / Azure / GCP)", "level": 80, "icon": "fas fa-cloud" },
-      { "name": "Power BI", "level": 75, "icon": "fas fa-chart-bar" }
+      { "name": "C# / .NET Core / .NET Framework", "level": "95", "icon": "fab fa-microsoft" },
+      { "name": "Microsoft Dynamics CRM", "level": "92", "icon": "fas fa-users-cog" },
+      { "name": "SQL Server / SSIS / SSRS", "level": "90", "icon": "fas fa-database" },
+      { "name": "DevOps و CI/CD", "level": "90", "icon": "fas fa-cogs" },
+      { "name": "JavaScript / Angular / React", "level": "85", "icon": "fab fa-js" },
+      { "name": "SharePoint", "level": "85", "icon": "fab fa-microsoft" },
+      { "name": "الحوسبة السحابية (AWS / Azure / GCP)", "level": "80", "icon": "fas fa-cloud" },
+      { "name": "Power BI", "level": "75", "icon": "fas fa-chart-bar" }
     ],
     "softSkills": ["التحسين المستمر", "الانضباط", "التواصل", "حل المشكلات", "قيادة الفريق", "التفكير التحليلي"]
   },
@@ -128,6 +129,7 @@
     "ctaBtn": "لنتحدث",
     "addToChrome": "أضف إلى كروم",
     "visitSite": "زيارة الموقع",
+    "comingSoon": "قريباً",
     "viewOnGithub": "عرض على GitHub",
     "featuresLabel": "المميزات",
     "technologiesLabel": "التقنيات",
@@ -249,12 +251,19 @@
     "sendBtn": "إرسال الرسالة",
     "sendingBtn": "جارٍ الإرسال...",
     "successMsg": "تم إرسال الرسالة! سأرد عليك قريباً.",
+    "resumeFormat": "بصيغة PDF",
+    "errors": {
+      "name": "مطلوب (حرفان على الأقل)",
+      "email": "يرجى إدخال بريد إلكتروني صحيح",
+      "subject": "الموضوع مطلوب",
+      "message": "مطلوب (10 أحرف على الأقل)"
+    },
     "methods": [
-      { "icon": "fas fa-envelope", "title": "البريد الإلكتروني", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335" },
+      { "icon": "fas fa-envelope", "title": "البريد الإلكتروني", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335", "dir": "ltr" },
       { "icon": "fab fa-linkedin-in", "title": "لينكد إن", "value": "عبدالرحمن الحويس", "link": "https://www.linkedin.com/in/abdulrahman-alhuwais/", "color": "#0077b5" },
       { "icon": "fab fa-github", "title": "GitHub", "value": "drperstry", "link": "https://github.com/drperstry", "color": "#6e40c9" },
-      { "icon": "fab fa-whatsapp", "title": "واتساب", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366" },
-      { "icon": "fas fa-phone", "title": "الهاتف", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1" },
+      { "icon": "fab fa-whatsapp", "title": "واتساب", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366", "dir": "ltr" },
+      { "icon": "fas fa-phone", "title": "الهاتف", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1", "dir": "ltr" },
       { "icon": "fas fa-map-marker-alt", "title": "الموقع", "value": "الرياض، المملكة العربية السعودية", "link": "https://maps.google.com/?q=Riyadh,Saudi+Arabia", "color": "#f59e0b" }
     ]
   },
@@ -262,7 +271,8 @@
     "name": "عبدالرحمن الحويس",
     "role": "مهندس برمجيات أول",
     "rights": "جميع الحقوق محفوظة.",
-    "builtWith": "مبني بـ Angular"
+    "connect": "تواصل",
+    "location": "الرياض، المملكة العربية السعودية"
   },
   "theme": {
     "dark": "داكن",

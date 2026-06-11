@@ -57,6 +57,7 @@
     font-size: 0.95rem;
     position: relative;
     padding: 0.5rem 0;
+    cursor: pointer;
     transition: color 0.3s ease;
 
     &::after {
@@ -192,6 +193,7 @@
     padding: 1rem 1.5rem;
     font-weight: 500;
     border-radius: 8px;
+    cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover,
@@ -229,6 +231,16 @@
       color: white;
     }
   }
+}
+
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  height: 2px;
+  background: var(--gradient);
+  pointer-events: none;
+  transition: width 0.1s linear;
 }
 
 .desktop-nav {

@@ -1,27 +1,30 @@
-# Portfolio
+# Abdulrahman Alhuwais — Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+Personal portfolio website: [drperstry.github.io](https://drperstry.github.io/)
 
-## Development server
+Built with [Angular](https://angular.dev/) (standalone components), NgRx, and
+[ngx-translate](https://github.com/ngx-translate/core) with full English/Arabic
+(LTR/RTL) support and dark/light themes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development
 
-## Code scaffolding
+```bash
+npm install
+npm start          # dev server at http://localhost:4200
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build & Deploy
 
-## Build
+```bash
+npm run build      # outputs to docs/
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The site is served by GitHub Pages from the `docs/` folder, so commit the build
+output along with source changes.
 
-## Running unit tests
+## Structure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `src/app/Component/` — navbar, home, products, contact, footer components
+- `src/app/store/` — NgRx store for language/theme (persisted to localStorage)
+- `src/assets/i18n/` — `en.json` / `ar.json` translation files
+  (note: ngx-translate only round-trips **string** leaf values — keep numbers as strings)

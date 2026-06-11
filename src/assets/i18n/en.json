@@ -6,7 +6,8 @@
     "skills": "Skills",
     "products": "Products",
     "contact": "Contact",
-    "downloadResume": "Download Resume"
+    "downloadResume": "Download Resume",
+    "backToTop": "Back to top"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -108,14 +109,14 @@
     "hardSkillsTitle": "Technical Skills",
     "softSkillsTitle": "Soft Skills",
     "hardSkills": [
-      { "name": "C# / .NET Core / .NET Framework", "level": 95, "icon": "fab fa-microsoft" },
-      { "name": "Microsoft Dynamics CRM", "level": 92, "icon": "fas fa-users-cog" },
-      { "name": "SQL Server / SSIS / SSRS", "level": 90, "icon": "fas fa-database" },
-      { "name": "DevOps & CI/CD", "level": 90, "icon": "fas fa-cogs" },
-      { "name": "JavaScript / Angular / React", "level": 85, "icon": "fab fa-js" },
-      { "name": "SharePoint", "level": 85, "icon": "fab fa-microsoft" },
-      { "name": "Cloud (AWS / Azure / GCP)", "level": 80, "icon": "fas fa-cloud" },
-      { "name": "Power BI", "level": 75, "icon": "fas fa-chart-bar" }
+      { "name": "C# / .NET Core / .NET Framework", "level": "95", "icon": "fab fa-microsoft" },
+      { "name": "Microsoft Dynamics CRM", "level": "92", "icon": "fas fa-users-cog" },
+      { "name": "SQL Server / SSIS / SSRS", "level": "90", "icon": "fas fa-database" },
+      { "name": "DevOps & CI/CD", "level": "90", "icon": "fas fa-cogs" },
+      { "name": "JavaScript / Angular / React", "level": "85", "icon": "fab fa-js" },
+      { "name": "SharePoint", "level": "85", "icon": "fab fa-microsoft" },
+      { "name": "Cloud (AWS / Azure / GCP)", "level": "80", "icon": "fas fa-cloud" },
+      { "name": "Power BI", "level": "75", "icon": "fas fa-chart-bar" }
     ],
     "softSkills": ["Continuous Improvement", "Discipline", "Communication", "Problem Solving", "Team Leadership", "Analytical Thinking"]
   },
@@ -128,6 +129,7 @@
     "ctaBtn": "Let's Discuss",
     "addToChrome": "Add to Chrome",
     "visitSite": "Visit Site",
+    "comingSoon": "Coming Soon",
     "viewOnGithub": "View on GitHub",
     "featuresLabel": "Features",
     "technologiesLabel": "Technologies",
@@ -249,12 +251,19 @@
     "sendBtn": "Send Message",
     "sendingBtn": "Sending...",
     "successMsg": "Message sent! I'll get back to you soon.",
+    "resumeFormat": "PDF format",
+    "errors": {
+      "name": "Required (min 2 characters)",
+      "email": "Valid email required",
+      "subject": "Subject is required",
+      "message": "Required (min 10 characters)"
+    },
     "methods": [
-      { "icon": "fas fa-envelope", "title": "Email", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335" },
+      { "icon": "fas fa-envelope", "title": "Email", "value": "abdulrahmanhuwais@gmail.com", "link": "mailto:abdulrahmanhuwais@gmail.com", "color": "#ea4335", "dir": "ltr" },
       { "icon": "fab fa-linkedin-in", "title": "LinkedIn", "value": "Abdulrahman Alhuwais", "link": "https://www.linkedin.com/in/abdulrahman-alhuwais/", "color": "#0077b5" },
       { "icon": "fab fa-github", "title": "GitHub", "value": "drperstry", "link": "https://github.com/drperstry", "color": "#6e40c9" },
-      { "icon": "fab fa-whatsapp", "title": "WhatsApp", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366" },
-      { "icon": "fas fa-phone", "title": "Phone", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1" },
+      { "icon": "fab fa-whatsapp", "title": "WhatsApp", "value": "+966 503 810 471", "link": "https://wa.me/966503810471", "color": "#25d366", "dir": "ltr" },
+      { "icon": "fas fa-phone", "title": "Phone", "value": "+966 503 810 471", "link": "tel:+966503810471", "color": "#6366f1", "dir": "ltr" },
       { "icon": "fas fa-map-marker-alt", "title": "Location", "value": "Riyadh, Saudi Arabia", "link": "https://maps.google.com/?q=Riyadh,Saudi+Arabia", "color": "#f59e0b" }
     ]
   },
@@ -262,7 +271,8 @@
     "name": "Abdulrahman Alhuwais",
     "role": "Senior Software Engineer",
     "rights": "All rights reserved.",
-    "builtWith": "Built with Angular"
+    "connect": "Connect",
+    "location": "Riyadh, Saudi Arabia"
   },
   "theme": {
     "dark": "Dark",
